@@ -259,6 +259,37 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -304,7 +335,7 @@
 <h5 id="定义css、引用指定外部资源、引用脚本元素"><a href="#定义css、引用指定外部资源、引用脚本元素" class="headerlink" title="定义css、引用指定外部资源、引用脚本元素"></a><3>定义css、引用指定外部资源、引用脚本元素</3></h5><blockquote>
 <p>code</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">		a &#123;</span><br><span class="line">			color: white;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line">	&lt;!-- 通过外部链接引用css文件 --&gt;</span><br><span class="line">	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot; /&gt;</span><br><span class="line">	&lt;!-- 为页面定义网站标志 --&gt;</span><br><span class="line">	&lt;link rel=&quot;shortcut icon&quot; href=&quot;website.ico&quot; type=&quot;image/x-icon&quot; /&gt;</span><br><span class="line">	&lt;!-- 预先获取资源 --&gt;</span><br><span class="line">	&lt;link rel=&quot;prefetch&quot; href=&quot;/page2.html&quot; /&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- 定义Js --&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		documents.write(&quot;this is from the script!&quot;);</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">	&lt;!-- 载入外部脚本库 --&gt;</span><br><span class="line">	&lt;script scr=&quot;simple.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;!-- 推迟执行 --&gt;</span><br><span class="line">	&lt;script refer&gt;</span><br><span class="line">		document.getElementById(&quot;elementId&quot;).innerText = &quot;newValue&quot;;</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">	&lt;!-- 异步执行脚本 --&gt;</span><br><span class="line">	&lt;script async&gt;</span><br><span class="line">		var i = 0;</span><br><span class="line">		while(1) &#123;</span><br><span class="line">			i ++;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">		a &#123;</span><br><span class="line">			color: white;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line">	&lt;!-- 通过外部链接引用css文件 --&gt;</span><br><span class="line">	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot; /&gt;</span><br><span class="line">	&lt;!-- 为页面定义网站标志 --&gt;</span><br><span class="line">	&lt;link rel=&quot;shortcut icon&quot; href=&quot;website.ico&quot; type=&quot;image/x-icon&quot; /&gt;</span><br><span class="line">	&lt;!-- 预先获取资源 --&gt;</span><br><span class="line">	&lt;link rel=&quot;prefetch&quot; href=&quot;/page2.html&quot; /&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- 定义Js --&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		documents.write(&quot;this is from the script!&quot;);</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">	&lt;!-- 载入外部脚本库 --&gt;</span><br><span class="line">	&lt;script scr=&quot;simple.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;!-- 推迟执行 --&gt;</span><br><span class="line">	&lt;script defer&gt;</span><br><span class="line">		document.getElementById(&quot;elementId&quot;).innerText = &quot;newValue&quot;;</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">	&lt;!-- 异步执行脚本 --&gt;</span><br><span class="line">	&lt;script async&gt;</span><br><span class="line">		var i = 0;</span><br><span class="line">		while(1) &#123;</span><br><span class="line">			i ++;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>description</p>
 </blockquote>
@@ -661,11 +692,18 @@
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
