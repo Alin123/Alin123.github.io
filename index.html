@@ -239,6 +239,143 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/24/HTML表格/" itemprop="url">
+                  HTML表格
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-24T17:21:43+08:00" content="2016-05-24">
+              2016-05-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="生成基本的表格"><a href="#生成基本的表格" class="headerlink" title=" 生成基本的表格"></a><1> 生成基本的表格</1></h5><blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">        &lt;title&gt;基本表结构&lt;/title&gt;</span><br><span class="line">        &lt;!--</span><br><span class="line">         &lt;style&gt;</span><br><span class="line">         tr &gt; th &#123;text-align:left;background:grey;color:white&#125;</span><br><span class="line">         tr &gt; th:only-of-type &#123;text-align:right;background:lightgrey;color:grey&#125;</span><br><span class="line">         &lt;/style&gt;</span><br><span class="line">         --&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            thead th &#123;text-align:center; background:black; color:white&#125;</span><br><span class="line">            tbody th &#123;text-align:right; background:lightgrey; color:red&#125;</span><br><span class="line">            tfoot th &#123;text-align:left; background:yellow; color:blue&#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!-- table:表示表格元素 --&gt;</span><br><span class="line">        &lt;!-- tr:表示表格中的行、HTML表格基于行而不是列 --&gt;</span><br><span class="line">        &lt;!-- td:表示表格中的单元格 --&gt;</span><br><span class="line">        &lt;!-- th:表示表格中表头的单元格 --&gt;</span><br><span class="line">        &lt;!-- thead:表结构，表示表头 --&gt;</span><br><span class="line">        &lt;!-- tbody:表结构，表示主题 --&gt;</span><br><span class="line">        &lt;!-- tfoot:表结构，表示表脚 --&gt;</span><br><span class="line">        &lt;table&gt;</span><br><span class="line">            &lt;thead&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;等级&lt;/th&gt;</span><br><span class="line">                    &lt;th&gt;名字&lt;/th&gt;</span><br><span class="line">                    &lt;th&gt;颜色&lt;/th&gt;</span><br><span class="line">                    &lt;th&gt;大小&lt;/th&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">            &lt;/thead&gt;</span><br><span class="line">            &lt;tbody&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;最喜欢&lt;/th&gt;</span><br><span class="line">                    &lt;td&gt;苹果&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;绿色&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;中型&lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;第二喜欢&lt;/th&gt;</span><br><span class="line">                    &lt;td&gt;柑橘&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;橙色&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;大型&lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">            &lt;/tbody&gt;</span><br><span class="line">            &lt;tfoot&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;等级代表喜欢程度&lt;/th&gt;</span><br><span class="line">                    &lt;th&gt;水果名称&lt;/th&gt;</span><br><span class="line">                    &lt;th&gt;水果颜色&lt;/th&gt;</span><br><span class="line">                    &lt;th&gt;水果大小&lt;/th&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">            &lt;/tfoot&gt;</span><br><span class="line">        &lt;/table&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description</p>
+</blockquote>
+<p>元素：table、tr、th、td、thead、tbody、tfoot</p>
+<blockquote>
+<p>presentation </p>
+</blockquote>
+<p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-table-1.png" alt="table表实际效果"></p>
+<hr>
+<h5 id="制作不规则表格"><a href="#制作不规则表格" class="headerlink" title=" 制作不规则表格"></a><2> 制作不规则表格</2></h5><blockquote>
+<p>code </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">        &lt;title&gt;不规则表结构&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            thead th &#123;text-align:center; background:black; color:white&#125;</span><br><span class="line">            tbody th &#123;text-align:right; background:lightgrey; color:red&#125;</span><br><span class="line">            tfoot th &#123;text-align:left; background:yellow; color:blue&#125;</span><br><span class="line">            [colspan],[rowspan] &#123;font-weight:bold; border:medium solid black&#125;</span><br><span class="line">            thead [colspan], tfoot [colspan] &#123;text-align:center&#125;</span><br><span class="line">            caption &#123;font-weight:bold; font-size:large; margin-bottom:5px&#125;</span><br><span class="line">            #colgroup1 &#123;background-color:blueviolet&#125;</span><br><span class="line">            #col3 &#123;background-color:greenyellow; font-size:small&#125;</span><br><span class="line">            #colgroup2 &#123;background-color:purple&#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!-- table:表示表格元素 --&gt;</span><br><span class="line">        &lt;!-- tr:表示表格中的行、HTML表格基于行而不是列 --&gt;</span><br><span class="line">        &lt;!-- td:表示表格中的单元格 --&gt;</span><br><span class="line">        &lt;!-- th:表示表格中表头的单元格 --&gt;</span><br><span class="line">        &lt;!-- thead:表结构，表示表头 --&gt;</span><br><span class="line">        &lt;!-- tbody:表结构，表示主题 --&gt;</span><br><span class="line">        &lt;!-- tfoot:表结构，表示表脚 --&gt;</span><br><span class="line">        &lt;!-- caption:为表格添加标题 --&gt;</span><br><span class="line">        &lt;!-- colgroup:代表一组列，span属性代表影响的列数，</span><br><span class="line">             应用到colgroup的css样式具体程度低于直接应用于tr、td和th元素上的样式 --&gt;</span><br><span class="line">        &lt;!-- col:表示列组中的一个列，span也表示影响的列数 --&gt;</span><br><span class="line">        &lt;!-- border:设置表格的边框，border=&quot;1&quot; --&gt;</span><br><span class="line">        &lt;table&gt;</span><br><span class="line">            &lt;caption&gt;2016年水果大调查&lt;/caption&gt;</span><br><span class="line">            &lt;colgroup id=&quot;colgroup1&quot;&gt;</span><br><span class="line">                &lt;col id=&quot;col1And2&quot; span=&quot;2&quot;/&gt;</span><br><span class="line">                &lt;col id=&quot;col3&quot;/&gt;</span><br><span class="line">            &lt;/colgroup&gt;</span><br><span class="line">            &lt;colgroup id=&quot;colgroup2&quot; span=&quot;2&quot;/&gt;</span><br><span class="line">            &lt;thead&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;等级&lt;/th&gt;</span><br><span class="line">                    &lt;th&gt;名字&lt;/th&gt;</span><br><span class="line">                    &lt;th&gt;颜色&lt;/th&gt;</span><br><span class="line">                    &lt;th colspan=&quot;2&quot;&gt;大小与选票数&lt;/th&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">            &lt;/thead&gt;</span><br><span class="line">            &lt;tbody&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;最喜欢&lt;/th&gt;</span><br><span class="line">                    &lt;td&gt;苹果&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;绿色&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;中型&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;500&lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;第二喜欢&lt;/th&gt;</span><br><span class="line">                    &lt;td&gt;柑橘&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;橙色&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;大型&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;450&lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th&gt;第三喜欢&lt;/th&gt;</span><br><span class="line">                    &lt;td&gt;石榴&lt;/td&gt;</span><br><span class="line">                    &lt;td colspan=&quot;2&quot; rowspan=&quot;2&quot;&gt;石榴和樱桃可以各有颜色和大小&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;203&lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th rowspan=&quot;2&quot;&gt;最后喜欢&lt;/th&gt;</span><br><span class="line">                    &lt;td&gt;樱桃&lt;/td&gt;</span><br><span class="line">                    &lt;td rowspan=&quot;2&quot;&gt;75&lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;td&gt;菠萝&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;棕色&lt;/td&gt;</span><br><span class="line">                    &lt;td&gt;非常大&lt;/td&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">            &lt;/tbody&gt;</span><br><span class="line">            &lt;tfoot&gt;</span><br><span class="line">                &lt;tr&gt;</span><br><span class="line">                    &lt;th colspan=&quot;5&quot;&gt; &amp;#169; 2016.5.24 Create By ALin &lt;/th&gt;</span><br><span class="line">                &lt;/tr&gt;</span><br><span class="line">            &lt;/tfoot&gt;</span><br><span class="line">        &lt;/table&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description</p>
+</blockquote>
+<p>元素：caption、colgroup、col</p>
+<blockquote>
+<p>presentation</p>
+</blockquote>
+<p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-table-2.png" alt="不规则表格实际效果"></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/23/组织页面内容/" itemprop="url">
                   组织页面内容
                 </a>
@@ -1011,7 +1148,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
