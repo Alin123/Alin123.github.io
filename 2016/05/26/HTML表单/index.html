@@ -1,0 +1,669 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML,基础知识," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="基本表单
+code 
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;		&amp;lt;title&amp;gt;F">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML表单">
+<meta property="og:url" content="http://yoursite.com/2016/05/26/HTML表单/index.html">
+<meta property="og:site_name" content="Alin的博客">
+<meta property="og:description" content="基本表单
+code 
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;		&amp;lt;title&amp;gt;F">
+<meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-1.png">
+<meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-3.png">
+<meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-2.png">
+<meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-4.png">
+<meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-5.png">
+<meta property="og:updated_time" content="2016-05-26T08:17:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML表单">
+<meta name="twitter:description" content="基本表单
+code 
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667&amp;lt;!DOCTYPE HTML&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;		&amp;lt;title&amp;gt;F">
+<meta name="twitter:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> HTML表单 | Alin的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Alin的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">时间教会了我们什么... 坦然的面对生活吗？我想是的～</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML表单
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-26T16:14:38+08:00" content="2016-05-26">
+              2016-05-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="基本表单"><a href="#基本表单" class="headerlink" title=" 基本表单"></a><1> 基本表单</1></h5><blockquote>
+<p>code </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;title&gt;Form表单&lt;/title&gt;</span><br><span class="line">   &lt;/head&gt;</span><br><span class="line">   &lt;body&gt;</span><br><span class="line">   		&lt;!-- form:告诉浏览器他处理的是HTML表单 --&gt;</span><br><span class="line">   			&lt;!-- action属性：说明提交表单时浏览器应该把从用户收集的数据发送到什么地方 --&gt;</span><br><span class="line">   			&lt;!-- method属性：说明了提交的方式 --&gt;</span><br><span class="line">   			&lt;!-- enctype属性：指定浏览器发给服务器的数据采用的编码格式 --&gt;</span><br><span class="line">   			&lt;!-- target属性：指定表单反馈信息的目标显示位置 --&gt;</span><br><span class="line">   			&lt;!-- name属性：为表单设置独一无二的标识符，多用于DOM区分表单 --&gt;</span><br><span class="line">   			&lt;!-- id属性：多用于css选择器 --&gt;</span><br><span class="line">   		&lt;!-- input:收集用户输入 --&gt;</span><br><span class="line">   			&lt;!-- name属性：name=value --&gt;</span><br><span class="line">   			&lt;!-- value属性：name=value --&gt;</span><br><span class="line">   			&lt;!-- type属性：信息收录框的类型 --&gt;</span><br><span class="line">   		&lt;!-- label:在表单中添加说明标签 --&gt;</span><br><span class="line">   			&lt;!-- for属性：通过设置为input元素id属性的值与input元素关联 --&gt;</span><br><span class="line">   		&lt;!-- fieldset:对表单元素编组 --&gt;</span><br><span class="line">   			&lt;!-- disabled属性：禁用某个编组的元素 --&gt;</span><br><span class="line">   		&lt;!-- button:按钮元素提交表单 --&gt;</span><br><span class="line">   			&lt;!-- type属性：默认为submit，用于提交包含它的表单，可以使用一下属性 --&gt;</span><br><span class="line">   			&lt;!-- form属性：指定关联的form表单 --&gt;</span><br><span class="line">   			&lt;!-- formaction属性：覆盖form元素的action属性，另行指定提交的URL --&gt;</span><br><span class="line">   			&lt;!-- formenctype属性：覆盖form元素的enctype属性 --&gt;</span><br><span class="line">   			&lt;!-- formtarget属性：覆盖form元素的target属性 --&gt;</span><br><span class="line">   			&lt;!-- formmethod属性：覆盖form元素的method属性 --&gt;</span><br><span class="line">   		&lt;form id=&quot;statisticsForm&quot; method=&quot;post&quot; action=&quot;&quot;&gt;</span><br><span class="line">   			&lt;fieldset&gt;</span><br><span class="line">   				&lt;legend&gt;输入用户信息&lt;/legend&gt;</span><br><span class="line">   				&lt;p&gt;</span><br><span class="line">   					&lt;label autofocus for=&quot;name&quot;&gt;</span><br><span class="line">   						姓名:&lt;input id=&quot;name&quot; name=&quot;name&quot;/&gt;</span><br><span class="line">   					&lt;/label&gt;</span><br><span class="line">   				&lt;/p&gt;</span><br><span class="line">   				&lt;p&gt;</span><br><span class="line">   					&lt;label disabled for=&quot;password&quot;&gt;</span><br><span class="line">   						密码:&lt;input id=&quot;password&quot; name=&quot;password&quot;/&gt;</span><br><span class="line">   					&lt;/label&gt;</span><br><span class="line">   				&lt;/p&gt;</span><br><span class="line">   			&lt;/fieldset&gt;</span><br><span class="line">   			&lt;fieldset disabled&gt;</span><br><span class="line">   				&lt;legend&gt;填写您最喜欢的水果&lt;/legend&gt;</span><br><span class="line">   				&lt;p&gt;</span><br><span class="line">   					&lt;label for=&quot;fave_1&quot;&gt;</span><br><span class="line">   						#1:&lt;input id=&quot;fave_1&quot; name=&quot;fave_1&quot;/&gt;</span><br><span class="line">   					&lt;/label&gt;</span><br><span class="line">   				&lt;/p&gt;</span><br><span class="line">   				&lt;p&gt;</span><br><span class="line">   					&lt;label for=&quot;fave_2&quot;&gt;</span><br><span class="line">   						#2:&lt;input id=&quot;fave_2&quot; name=&quot;fave_2&quot;/&gt;</span><br><span class="line">   					&lt;/label&gt;</span><br><span class="line">   				&lt;/p&gt;</span><br><span class="line">   				&lt;p&gt;</span><br><span class="line">   					&lt;label for=&quot;fave_3&quot;&gt;</span><br><span class="line">   						#3:&lt;input id=&quot;fave_3&quot; name=&quot;fave_3&quot;/&gt;</span><br><span class="line">   					&lt;/label&gt;</span><br><span class="line">   				&lt;/p&gt;</span><br><span class="line">   			&lt;/fieldset&gt;</span><br><span class="line">   			&lt;button type=&quot;submit&quot; formaction=&quot;表单要提交的URL&quot; formmethod=&quot;POST&quot;&gt;提  交&lt;/button&gt;</span><br><span class="line">   			&lt;button type=&quot;reset&quot;&gt;重  置&lt;/button&gt;</span><br><span class="line">   		&lt;/form&gt;</span><br><span class="line">   		&lt;!-- 关联表单外元素 --&gt;</span><br><span class="line">   		&lt;button form=&quot;statisticsForm&quot; type=&quot;button&quot;&gt;关联statisticsForm表单&lt;/button&gt;</span><br><span class="line">   &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description</p>
+</blockquote>
+<ul>
+<li>元素：<ol>
+<li>form<ul>
+<li>method属性:GET,POST</li>
+<li>action属性</li>
+<li>enctype属性:application/x-www-form-urlencoded(默认编码格式，它不能将文件上传到服务器)、multipart/form-data(用于将文件上传到服务器)、text/plain(谨慎使用)</li>
+<li>autocomplete属性</li>
+<li>target属性:_blank、_parent、_self、_top、\<frame></li>
+</ul>
+</li>
+<li>input</li>
+<li>button<ul>
+<li>type属性:submit(提交表单)、reset(重置表单)、button(作为一般元素使用，关联Js函数)</li>
+</ul>
+</li>
+<li>fieldset</li>
+<li>label</li>
+</ol>
+</li>
+<li>方法：<ol>
+<li>GET(用于安全交互，同一个请求可以发起任意多次而不会产生额外作用，多用于获取只读信息)</li>
+<li>POST(则用于不安全交互，多用于会改变应用程序状态的各种操作)</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>presentation</p>
+</blockquote>
+<p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-1.png" alt="基本表单"></p>
+<hr>
+<h5 id="定制input元素"><a href="#定制input元素" class="headerlink" title=" 定制input元素"></a><2> 定制input元素</2></h5><blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;各种input元素&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!-- input元素 --&gt;</span><br><span class="line">        &lt;!-- datalist：数据列表 --&gt;</span><br><span class="line">        &lt;!-- option：datalist中的每一个option元素都代表一个选择项 --&gt;</span><br><span class="line">            &lt;!-- value：该选项被选中时input元素所用的值 --&gt;</span><br><span class="line">            &lt;!-- label：描述该选项的文字 --&gt;</span><br><span class="line">        &lt;form method=&quot;post&quot; action=&quot;表单要提交的URL&quot;&gt;</span><br><span class="line">            &lt;input type=&quot;hidden&quot; name=&quot;user_id&quot; value=&quot;1234&quot;/&gt;</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            姓名：&lt;input readonly id=&quot;name&quot; name=&quot;user_name&quot; value=&quot;ALin&quot; maxlength=&quot;10&quot; size=&quot;20&quot; placeholder=&quot;请输入姓名&quot;/&gt;</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            密码：&lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;user_password&quot; placeholder=&quot;最少六个字符&quot;/&gt;</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            地区：&lt;input id=&quot;area&quot; name=&quot;user_area&quot; list=&quot;areaList&quot; placeholder=&quot;请选择地区&quot;/&gt;</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            年龄：&lt;input type=&quot;number&quot; id=&quot;age&quot; name=&quot;user_age&quot; value=&quot;1&quot; step=&quot;1&quot; min=&quot;0&quot; max=&quot;100&quot;/&gt;</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            自信度：0&lt;input type=&quot;range&quot; id=&quot;selfConfidence&quot; name=&quot;user_selfConfidence&quot; value=&quot;1&quot; step=&quot;0.1&quot; min=&quot;0&quot; max=&quot;1&quot;/&gt;1</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            你有良民证吗？&lt;input type=&quot;radio&quot; id=&quot;policeCertificates&quot; name=&quot;user_policeCertificates&quot;/&gt;</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            喜欢的颜色：&lt;input type=&quot;color&quot; id=&quot;color&quot; name=&quot;user_color&quot;/&gt;</span><br><span class="line">            </span><br><span class="line">            &lt;fieldset&gt;</span><br><span class="line">                &lt;legend&gt;喜欢的水果(多选)：&lt;/legend&gt;</span><br><span class="line">                &lt;input type=&quot;checkbox&quot; name=&quot;user_fruit&quot; value=&quot;apple&quot;/&gt;苹果</span><br><span class="line">                &lt;input type=&quot;checkbox&quot; name=&quot;user_fruit&quot; value=&quot;orange&quot;/&gt;柑橘</span><br><span class="line">                &lt;input type=&quot;checkbox&quot; name=&quot;user_fruit&quot; value=&quot;cherries&quot;/&gt;樱桃</span><br><span class="line">            &lt;/fieldset&gt;</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            &lt;fieldset&gt;</span><br><span class="line">                &lt;legend&gt;性别(单选)：&lt;/legend&gt;</span><br><span class="line">                &lt;input type=&quot;radio&quot; name=&quot;user_sex&quot; value=&quot;m&quot;/&gt;男生</span><br><span class="line">                &lt;input type=&quot;radio&quot; name=&quot;user_sex&quot; value=&quot;f&quot;/&gt;女生</span><br><span class="line">            &lt;/fieldset&gt;</span><br><span class="line">            </span><br><span class="line">            &lt;input type=&quot;file&quot; id=&quot;file&quot; name=&quot;post_file&quot;/&gt;</span><br><span class="line">            &lt;br/&gt;</span><br><span class="line">            </span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;提交表单&quot;/&gt;</span><br><span class="line">            &lt;input type=&quot;reset&quot; value=&quot;重置表单内容&quot;/&gt;</span><br><span class="line">            &lt;input type=&quot;button&quot; value=&quot;input -&gt; button&quot;/&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">        &lt;datalist id=&quot;areaList&quot;&gt;</span><br><span class="line">            &lt;option value=&quot;朝阳区&quot; label=&quot;朝阳区群众&quot;/&gt;</span><br><span class="line">            &lt;option value=&quot;海淀区&quot;&gt;海淀区群众&lt;/option&gt;</span><br><span class="line">            &lt;option value=&quot;东城区&quot;/&gt;</span><br><span class="line">            &lt;option value=&quot;西城区&quot;/&gt;</span><br><span class="line">        &lt;/datalist&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description</p>
+</blockquote>
+<ul>
+<li>datalist</li>
+<li>option</li>
+<li>input<br><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-3.png" alt=""></li>
+</ul>
+<blockquote>
+<p>presentation</p>
+</blockquote>
+<p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-2.png" alt=""></p>
+<hr>
+<h5 id="其它表单元素与输入验证"><a href="#其它表单元素与输入验证" class="headerlink" title=" 其它表单元素与输入验证"></a><3> 其它表单元素与输入验证</3></h5><blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">	&lt;select id=&quot;vegetable&quot; name=&quot;user_vegetable&quot;&gt;</span><br><span class="line">		&lt;optgroup label=&quot;绿色蔬菜&quot;&gt;</span><br><span class="line">		    &lt;option value=&quot;celery&quot; label=&quot;芹菜&quot;&gt;芹菜&lt;/option&gt;</span><br><span class="line">		    &lt;option value=&quot;garlicChives&quot; selected&gt;韭菜&lt;/option&gt;</span><br><span class="line">		&lt;/optgroup&gt;</span><br><span class="line">		&lt;optgroup label=&quot;青色蔬菜&quot;&gt;</span><br><span class="line">		    &lt;option value=&quot;shangHaiQing&quot;&gt;上海青&lt;/option&gt;</span><br><span class="line">		    &lt;option value=&quot;spinach&quot;&gt;菠菜&lt;/option&gt;</span><br><span class="line">		&lt;/optgroup&gt;</span><br><span class="line">		&lt;optgroup label=&quot;红色蔬菜&quot;&gt;</span><br><span class="line">		    &lt;option value=&quot;mill&quot;&gt;西红柿&lt;/option&gt;</span><br><span class="line">		    &lt;option value=&quot;piper&quot;&gt;红辣椒&lt;/option&gt;</span><br><span class="line">		    &lt;option value=&quot;qiezi&quot;&gt;红茄子&lt;/option&gt;</span><br><span class="line">		    &lt;option value=&quot;redluobo&quot;&gt;红萝卜&lt;/option&gt;</span><br><span class="line">		&lt;/optgroup&gt;</span><br><span class="line">	&lt;/select&gt;</span><br><span class="line">	&lt;br/&gt;</span><br><span class="line">	告诉我你的故事：</span><br><span class="line">	&lt;br/&gt;</span><br><span class="line">	&lt;textarea id=&quot;story&quot; name=&quot;user_story&quot; cols=&quot;20&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">	&lt;br/&gt;</span><br><span class="line">	Email：&lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;user_email&quot; placeholder=&quot;user@mydomain.com&quot; required pattern=&quot;.*@mydomain.com$&quot;/&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description</p>
+</blockquote>
+<p>元素：select、optgroup、option、textarea</p>
+<blockquote>
+<p>presentation</p>
+</blockquote>
+<p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-4.png" alt=""><br><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-form-5.png" alt=""></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML/" rel="tag">#HTML</a>
+          
+            <a href="/tags/基础知识/" rel="tag">#基础知识</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/24/HTML表格/" rel="next" title="HTML表格">
+                <i class="fa fa-chevron-left"></i> HTML表格
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Alin" />
+          <p class="site-author-name" itemprop="name">Alin</p>
+          <p class="site-description motion-element" itemprop="description">我的职业？你知道的，现在想来，我一直想当个面包师的。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本表单"><span class="nav-number">1.</span> <span class="nav-text"> 基本表单</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#定制input元素"><span class="nav-number">2.</span> <span class="nav-text"> 定制input元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其它表单元素与输入验证"><span class="nav-number">3.</span> <span class="nav-text"> 其它表单元素与输入验证</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
