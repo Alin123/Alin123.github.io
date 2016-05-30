@@ -314,6 +314,24 @@
 <p>presentation</p>
 </blockquote>
 <p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-links-1.png" alt=""></p>
+<hr>
+<h5 id="通过嵌入内容"><a href="#通过嵌入内容" class="headerlink" title=" 通过嵌入内容"></a><2> 通过嵌入内容</2></h5><blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;!-- 通过embed嵌入视频 --&gt;</span><br><span class="line">	&lt;embed src=&quot;视频地址&quot; type=&quot;application/x-shockwave&quot; width=&quot;200&quot; height=&quot;200&quot; allowfullscreen=&quot;true&quot;/&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- 通过object嵌入视频 --&gt;</span><br><span class="line">	&lt;object width=&quot;200&quot; height=&quot;200&quot; data=&quot;视频地址&quot; type=&quot;application/x-shockwave&quot; &gt;</span><br><span class="line">		&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">	&lt;/object&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- 通过object嵌入图片 --&gt;</span><br><span class="line">	&lt;object data=&quot;图片地址&quot; type=&quot;image/png&quot; usemap=&quot;#myMap&quot;&gt;</span><br><span class="line">	&lt;/object&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- 使用object实现iframe --&gt;</span><br><span class="line">	&lt;object type=&quot;text/html&quot; name=&quot;myFrame&quot; width=&quot;740&quot; height=&quot;200&quot;&gt;</span><br><span class="line">	&lt;/object&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description </p>
+</blockquote>
+<p>元素：embed、object</p>
+<hr>
+<h5 id="嵌入数字表现形式"><a href="#嵌入数字表现形式" class="headerlink" title=" 嵌入数字表现形式"></a><3> 嵌入数字表现形式</3></h5><blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;progress id=&quot;myprogress&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</span><br><span class="line">	&lt;br/&gt;</span><br><span class="line">        &lt;button type=&quot;button&quot; value=&quot;30&quot;&gt;30%&lt;/button&gt;</span><br><span class="line">        &lt;button type=&quot;button&quot; value=&quot;60&quot;&gt;60%&lt;/button&gt;</span><br><span class="line">        &lt;button type=&quot;button&quot; value=&quot;60&quot;&gt;90%&lt;/button&gt;</span><br><span class="line">    &lt;br/&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var buttons = document.getElementsByTagName(&apos;BUTTON&apos;);</span><br><span class="line">        var progress = document.getElementById(&apos;myprogress&apos;);</span><br><span class="line">        for (var i = 0; i &lt; buttons.length; i ++) &#123;</span><br><span class="line">            buttons[i].onclick = function(e) &#123;</span><br><span class="line">                progress.value = e.target.value;</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description </p>
+</blockquote>
+<p>元素：embed、object</p>
 
           
         
