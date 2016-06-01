@@ -100,7 +100,7 @@
 将代码克隆到该文件夹：git clone http://gitlab/10.100.10.1/myProject.git
 进入工程文件：cd myProject
 查看所有分支：">
-<meta property="og:updated_time" content="2016-06-01T03:39:10.000Z">
+<meta property="og:updated_time" content="2016-06-01T03:56:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode使用CocoaPods管理第三方类库时的异常">
 <meta name="twitter:description" content="场景描述：
@@ -335,7 +335,7 @@
 <blockquote>
 <p>实际问题</p>
 </blockquote>
-<p>接下来就是打开工程文件myProject.xcworkspace(使用了CocoaPods管理了第三方类库)，编译…<br><br>问题来了，Xcode抛出异常：</p>
+<p>接下来就是打开工程文件myProject.xcworkspace(使用了CocoaPods管理了第三方类库)，编译…<br>问题来了，Xcode抛出异常：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">diff: /../Podfile.lock: No such file or directory</span><br><span class="line">diff: /Manifest.lock: No such file or directory </span><br><span class="line">error: The sandbox is not in sync with the Podfile.lock. Run &apos;pod install&apos; or update your CocoaPods installation.</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>解决方法</p>
