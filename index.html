@@ -239,6 +239,150 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/01/Xcode使用CocoaPods管理第三方类库时的异常/" itemprop="url">
+                  Xcode使用CocoaPods管理第三方类库时的异常
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-01T11:33:43+08:00" content="2016-06-01">
+              2016-06-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>场景描述：</p>
+</blockquote>
+<p>2016年5月31日下午5点58分，项目组决定重启商家版UI重构版(之前该版本为能直接上线且直接在master主分支上开发的)。于是:</p>
+<ol>
+<li>新建名为<code>Seller_New_UI</code>文件夹，并通过命令行进入该文件夹；</li>
+<li>将代码克隆到该文件夹：<code>git clone http://gitlab/10.100.10.1/myProject.git</code></li>
+<li>进入工程文件：<code>cd myProject</code></li>
+<li>查看所有分支：<code>git branch -a</code>，发现当前在<code>master</code>主分支，本地和远端都木有“UI重构版分支”</li>
+<li>基于<code>master</code>主分支创建“UI重构版分支”分支：<code>git branch feature/dev_newUI_v2.0</code></li>
+<li>查看所有分支：<code>git branch -a</code>，发现本地已经有了<code>feature/dev_newUI_v2.0</code>分支</li>
+<li>将新建分支同步到远端：<code>git push origin master</code></li>
+<li>使用<code>git branch -r</code>查看远端所有分支，发现已经有啦</li>
+<li>切换到本地新建分支：<code>git checkout feature/dev_newUI_2.0</code></li>
+</ol>
+<blockquote>
+<p>实际问题</p>
+</blockquote>
+<p>接下来就是打开工程文件myProject.xcworkspace(使用了CocoaPods管理了第三方类库)，编译…<br><br>问题来了，Xcode抛出异常：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">diff: /../Podfile.lock: No such file or directory</span><br><span class="line">diff: /Manifest.lock: No such file or directory </span><br><span class="line">error: The sandbox is not in sync with the Podfile.lock. Run &apos;pod install&apos; or update your CocoaPods installation.</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>解决方法</p>
+</blockquote>
+<ol>
+<li>接着使用命令行键入pod命令：<code>pod install</code></li>
+<li>待命令执行完成，重新打开myProject.xcworkspace工程文件，编译…</li>
+</ol>
+<p>这时候编译就成功啦！(大都数情况是失败的，这时候原因大多是该引用的文件未添加应用，已经删除的文件引用还没删除，证书呀，手动引用第三方类库呀，等布拉布拉一大堆问题。一个一个解决吧～)</p>
+<blockquote>
+<p>原因猜测</p>
+</blockquote>
+<p>使用CocoaPods管理第三方类库，在同步代码到远端时，只同步了<code>Podfole</code>和<code>xxx.xcworkspace</code>工程文件，真正存放第三方类库的<code>Pods</code>文件夹是被忽略的(可能是没必要把实际的文件同步，只要有Podfole文件就好啦，用到的时候在重新下载一遍喽！)，刚克隆的工程里木有<code>Pods</code>文件夹及第三方类库和<code>Podfilelock</code>文件。使用<code>pod install</code>命令后，根据<code>Podfole</code>文件重新让CocoaPods管理。</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/30/HTML嵌入内容/" itemprop="url">
                   HTML嵌入内容
                 </a>
@@ -1487,7 +1631,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1504,7 +1648,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
