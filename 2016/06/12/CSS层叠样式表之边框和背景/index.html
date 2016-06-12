@@ -1,0 +1,733 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="使用边框和背景边框
+
+
+
+key
+value
+description
+
+
+
+
+border-widthborder-top-widthborder-left-widthborder-bottom-widthborder-right-width
+5px
+边框的宽度
+
+
+border-styleborder-top-styleborder-left-styleborder-bottom-styleb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS层叠样式表之边框和背景">
+<meta property="og:url" content="http://yoursite.com/2016/06/12/CSS层叠样式表之边框和背景/index.html">
+<meta property="og:site_name" content="Alin的博客">
+<meta property="og:description" content="使用边框和背景边框
+
+
+
+key
+value
+description
+
+
+
+
+border-widthborder-top-widthborder-left-widthborder-bottom-widthborder-right-width
+5px
+边框的宽度
+
+
+border-styleborder-top-styleborder-left-styleborder-bottom-styleb">
+<meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-css-1.png">
+<meta property="og:updated_time" content="2016-06-12T08:50:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS层叠样式表之边框和背景">
+<meta name="twitter:description" content="使用边框和背景边框
+
+
+
+key
+value
+description
+
+
+
+
+border-widthborder-top-widthborder-left-widthborder-bottom-widthborder-right-width
+5px
+边框的宽度
+
+
+border-styleborder-top-styleborder-left-styleborder-bottom-styleb">
+<meta name="twitter:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-css-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> CSS层叠样式表之边框和背景 | Alin的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Alin的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">时间教会了我们什么... 坦然的面对生活吗？我想是的～</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS层叠样式表之边框和背景
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-12T16:48:30+08:00" content="2016-06-12">
+              2016-06-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="使用边框和背景"><a href="#使用边框和背景" class="headerlink" title=" 使用边框和背景"></a><1> 使用边框和背景</1></h5><p>边框</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">key</th>
+<th style="text-align:center">value</th>
+<th style="text-align:center">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-width<br>border-top-width<br>border-left-width<br>border-bottom-width<br>border-right-width</td>
+<td style="text-align:center">5px</td>
+<td style="text-align:center">边框的宽度</td>
+</tr>
+<tr>
+<td style="text-align:left">border-style<br>border-top-style<br>border-left-style<br>border-bottom-style<br>border-right-style</td>
+<td style="text-align:center">none、dashed、dotted、double、groove、insert、outset、ridge、solid</td>
+<td style="text-align:center">边框的样式</td>
+</tr>
+<tr>
+<td style="text-align:left">border-color<br>border-top-color<br>border-left-color<br>border-bottom-color<br>border-right-color</td>
+<td style="text-align:center">black</td>
+<td style="text-align:center">边框颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">border-radius<br>border-top-left-radius<br>border-top-right-radius<br>border-bottom-left-radius<br>border-bottom-right-radius</td>
+<td style="text-align:center">20px 15px</td>
+<td style="text-align:center">边框的圆角，使用椭圆来定义圆角</td>
+</tr>
+<tr>
+<td style="text-align:left">border-image</td>
+<td style="text-align:center">url(xxx.png) 30 / 50px round</td>
+<td style="text-align:center">将图像用做边框</td>
+</tr>
+<tr>
+<td style="text-align:left">border-top<br>border-left<br>border-right<br>border-bottom</td>
+<td style="text-align:center">&lt;宽度&gt; &lt;样式&gt; &lt;颜色&gt;</td>
+<td style="text-align:center">某条边的样式，border简写属性</td>
+</tr>
+<tr>
+<td style="text-align:left">border</td>
+<td style="text-align:center">&lt;宽度&gt; &lt;样式&gt; &lt;颜色&gt;</td>
+<td style="text-align:center">边框样式，border简写属性</td>
+</tr>
+</tbody>
+</table>
+<p>背景</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">key</th>
+<th style="text-align:center">value</th>
+<th style="text-align:center">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">background-color</td>
+<td style="text-align:center">lightgray</td>
+<td style="text-align:center">元素背景色</td>
+</tr>
+<tr>
+<td style="text-align:left">background-image</td>
+<td style="text-align:center">url(xxx.png)</td>
+<td style="text-align:center">背景图像</td>
+</tr>
+<tr>
+<td style="text-align:left">background-size</td>
+<td style="text-align:center">40px 40px</td>
+<td style="text-align:center">背景图像尺寸</td>
+</tr>
+<tr>
+<td style="text-align:left">background-position</td>
+<td style="text-align:center">30px 10px</td>
+<td style="text-align:center">背景图像位置(no-repeat)</td>
+</tr>
+<tr>
+<td style="text-align:left">background-repeat</td>
+<td style="text-align:center">repeat-x、repeat-y、repeat、space、round、no-repeat</td>
+<td style="text-align:center">图像重复方式</td>
+</tr>
+<tr>
+<td style="text-align:left">background-origin</td>
+<td style="text-align:center">border-box、content-box</td>
+<td style="text-align:center">背景图像尺寸</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;使用边框和背景&lt;/title&gt;</span><br><span class="line">        &lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">            p &#123;</span><br><span class="line">                border-width: 30px;</span><br><span class="line">                border-style: double;</span><br><span class="line">                border-color: lightgray;</span><br><span class="line">                </span><br><span class="line">                border-top-width: 10px;</span><br><span class="line">                border-left-width: 20px;</span><br><span class="line">                </span><br><span class="line">                border-right-style: inset;</span><br><span class="line">                border-bottom-style: outset;</span><br><span class="line">                </span><br><span class="line">                border-top-left-radius: 30px 30px;</span><br><span class="line">                border-bottom-right-radius: 20px 20px;</span><br><span class="line">            &#125;</span><br><span class="line">            #border_image &#123;</span><br><span class="line">                border-width: 30px;</span><br><span class="line">                border-image: url(./css_border_image_1.png) 30 / 30px round;</span><br><span class="line">            &#125;</span><br><span class="line">            #background_image &#123;</span><br><span class="line">                border-width: 20px;</span><br><span class="line">                border-style: dotted;</span><br><span class="line">                </span><br><span class="line">                background-image: url(./css_background_image_1.png);</span><br><span class="line">                background-size: 80px 80px;</span><br><span class="line">                background-repeat: no-repeat;</span><br><span class="line">                background-origin: content-box;</span><br><span class="line">                background-position: 40px 0px;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            如果不去遍历世界，我们就不知道什么是我们精神和感情的寄托，但我们一旦遍历了世界，却发现我们再也无法回到那美丽的地方去了。当我们开始寻求，我们就已经失去，而我们不开始寻求，我们根本无法知道自己身边的一切是如此可贵。</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;border_image&quot;&gt;</span><br><span class="line">            我的那朵玫瑰，别人会以为她和你们一样，但她单独一朵就胜过你们全部。因为她是我浇灌的。因为她是我放在花罩中的。因为她是我用屏风保护起来的。因为她身上的毛毛虫是我除掉的。因为我倾听过她的哀怨，她的吹嘘，有时甚至是她的沉默。因为她是我的玫瑰。</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;background_image&quot;&gt;</span><br><span class="line">            狐狸说：“对我来说，你只是一个小男孩，就像其他成千上万个小男孩一样没有什么两样。我不需要你。你也不需要我。对你来说，我也只是一只狐狸，和其他成千上万的狐狸没有什么不同。但是，如果你驯养了我，我们就会彼此需要。对我来说，你就是我的世界里独一无二的了；我对你来说，也是你的世界里的唯一了。”</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>persentation</p>
+</blockquote>
+<p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-css-1.png" alt="css效果图"></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag">#CSS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/07/生命如歌1/" rel="next" title="生命如歌1">
+                <i class="fa fa-chevron-left"></i> 生命如歌1
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Alin" />
+          <p class="site-author-name" itemprop="name">Alin</p>
+          <p class="site-description motion-element" itemprop="description">我的职业？你知道的，现在想来，我一直想当个面包师的。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用边框和背景"><span class="nav-number">1.</span> <span class="nav-text"> 使用边框和背景</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
