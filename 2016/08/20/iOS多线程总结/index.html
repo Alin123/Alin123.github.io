@@ -101,7 +101,7 @@ GCD：将任务放在block中、创建和使用dispatch_queue_t的方式实现�
 <meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-20160819-01.png">
 <meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/image-blog-20160822-01.png">
 <meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/image-blog-20160822-02.png">
-<meta property="og:updated_time" content="2016-08-23T03:16:23.000Z">
+<meta property="og:updated_time" content="2016-08-25T02:36:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS多线程总结">
 <meta name="twitter:description" content="交付队列与交付线程iOS实现多线程编程的三种方法：
@@ -355,7 +355,7 @@ GCD：将任务放在block中、创建和使用dispatch_queue_t的方式实现�
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dispatch_sync(dispatch_get_main_queue(), ^&#123;//该语句不能放到主线程中</span><br><span class="line">    NSLog(@&quot;%@&quot;,[NSThread currentThread]);</span><br><span class="line">    NSLog(@&quot;执行了一个在主串行队列上创建的同步任务，该任务被交付到主串行。然而它照成了死锁，并不会执行&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^&#123;//并行队列上提交异步任务，该任务被提交到子线程后返回...</span><br><span class="line">    dispatch_sync(dispatch_get_main_queue(), ^&#123;//该语句不能放到主线程中</span><br><span class="line">        NSLog(@&quot;%@&quot;,[NSThread currentThread]);</span><br><span class="line">        NSLog(@&quot;执行了一个在主串行队列上创建的同步任务，该任务被交付到主串行。此时主线程将挂起，直到该任务完成！&quot;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>参考链接：<br><br><a href="http://www.cocoachina.com/ios/20160201/15179.html" target="_blank" rel="external">主要参考博文</a><br><br><a href="http://www.cocoachina.com/ios/20140428/8248.html" target="_blank" rel="external">讲解GCD深入一点的博文</a><br><br><a href="http://www.cocoachina.com/game/20151201/14517.html" target="_blank" rel="external">如何写好一个NSOperation的子类</a></p>
+<p>参考链接：<br><br><a href="http://www.cocoachina.com/ios/20160201/15179.html" target="_blank" rel="external">主要参考博文</a><br><br><a href="http://www.cocoachina.com/ios/20140428/8248.html" target="_blank" rel="external">讲解GCD深入一点的博文</a><br><br><a href="http://www.cocoachina.com/game/20151201/14517.html" target="_blank" rel="external">如何写好一个NSOperation的子类</a><br><br><a href="http://www.cocoachina.com/ios/20151117/14225.html" target="_blank" rel="external">自定义一个OperationQueue，探究GCD调度队列实现机制</a></p>
 
       
     </div>
