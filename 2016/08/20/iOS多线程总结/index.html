@@ -101,7 +101,7 @@ GCD：将任务放在block中、创建和使用dispatch_queue_t的方式实现�
 <meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/images-blog-20160819-01.png">
 <meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/image-blog-20160822-01.png">
 <meta property="og:image" content="http://o7nzfbf8y.bkt.clouddn.com/image-blog-20160822-02.png">
-<meta property="og:updated_time" content="2016-08-25T02:36:02.000Z">
+<meta property="og:updated_time" content="2016-08-29T02:04:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS多线程总结">
 <meta name="twitter:description" content="交付队列与交付线程iOS实现多线程编程的三种方法：
@@ -324,7 +324,7 @@ GCD：将任务放在block中、创建和使用dispatch_queue_t的方式实现�
 <li>NSOpreation、NSOperationQueue：通过将任务封装成operation、创建和使用queue的方式实现多线程编程</li>
 <li>GCD：将任务放在block中、创建和使用dispatch_queue_t的方式实现多线程编程</li>
 </ol>
-<p>后两者抽象层度更高(不显示的创建线程却可以实现多线程编程)，它们的相似点也很多：任务都被封装，都是通过交付队列的方式开始执行。任务真正被执行是在线程中，我们只是将任务交付给队列，队列帮我们选择或创建线程去执行他们。也可以将操作队列简单的理解成一种先进先出的数据结构。<br><br>在GCD中实现并行与串行是将任务交付给对应的并行与串行队列，在NSOperationQueue中可以通过添加依赖或设置最大并发数实现，<br><code>[[NSOperationQueue alloc] init]</code><br>返回GCD中的并行队列<code>dispatch_queue_create(&quot;com.alin.multithread.concurrentQueue&quot;, DISPATCH_QUEUE_CONCURRENT)</code>。并行队列将先入对的任务交付线程执行，然后接着交付下一个，而不管前一个是否完成(通常情况下…)。串行队列可以理解成等待前一个执行完成后再交付下一个任务开始执行。银行的都个窗口就像多个串行多列，先拿到号码的可以先办理任务，下一个人必须等待前一个完成。并行队列就像大家排队领申请表，领完后去一边填写，谁先填写完交上去的顺序不定，但领表的循序是先来先领的。<br></p>
+<p>后两者抽象层度更高(不显示的创建线程却可以实现多线程编程)，它们的相似点也很多：任务都被封装，都是通过交付队列的方式开始执行。任务真正被执行是在线程中，我们只是将任务交付给队列，队列帮我们选择或创建线程去执行他们。也可以将操作队列简单的理解成一种先进先出的数据结构。<br><br>在GCD中实现并行与串行是将任务交付给对应的并行与串行队列，在NSOperationQueue中可以通过添加依赖或设置最大并发数实现，<br><code>[[NSOperationQueue alloc] init]</code><br>返回GCD中的并行队列<code>dispatch_queue_create(&quot;com.alin.multithread.concurrentQueue&quot;, DISPATCH_QUEUE_CONCURRENT)</code>。并行队列将先入对的任务交付线程执行，然后接着交付下一个，而不管前一个是否完成(通常情况下…)。串行队列可以理解成等待前一个执行完成后再交付下一个任务开始执行。银行的都个窗口就像多个串行多列，先拿到号码的可以先办理任务，下一个人必须等待前一个完成。并行队列就像大家排队领申请表，领完后去一边填写，谁先填写完交上去的顺序不定，但领表的顺序是先来先领的。<br></p>
 <h4 id="异步与同步"><a href="#异步与同步" class="headerlink" title="异步与同步"></a>异步与同步</h4><p>同步：就是在发出一个功能调用时，在没有得到结果之前，该调用就不返回。<br><br>异步：异步的概念和同步相对。当一个异步过程调用发出后，调用者不会立刻得到结果。实际处理这个调用的部件是在调用发出后，通过状态、通知来通知调用者，或通过回调函数处理这个结果。</p>
 <h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-20160819-01.png" alt="多线程下载图片"></p>
 <p>demo是一个简单的singleViewApplication，控制器中的视图有4个imageView，顶部左边是一个切换队列的barButtonItem，右边是一个开始下载的barButtonItem，点击后开始下载任务。<br><br><strong>.h文件</strong></p>
@@ -353,8 +353,8 @@ GCD：将任务放在block中、创建和使用dispatch_queue_t的方式实现�
 <ul>
 <li><strong>串行+同步</strong>：任务一个接一个执行，如果你正运行在一个队列并调用<code>dispatch_sync</code>放在同一个队列，那你就百分百地创建了一个死锁</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dispatch_sync(dispatch_get_main_queue(), ^&#123;//该语句不能放到主线程中</span><br><span class="line">    NSLog(@&quot;%@&quot;,[NSThread currentThread]);</span><br><span class="line">    NSLog(@&quot;执行了一个在主串行队列上创建的同步任务，该任务被交付到主串行。然而它照成了死锁，并不会执行&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^&#123;//并行队列上提交异步任务，该任务被提交到子线程后返回...</span><br><span class="line">    dispatch_sync(dispatch_get_main_queue(), ^&#123;//该语句不能放到主线程中</span><br><span class="line">        NSLog(@&quot;%@&quot;,[NSThread currentThread]);</span><br><span class="line">        NSLog(@&quot;执行了一个在主串行队列上创建的同步任务，该任务被交付到主串行。此时主线程将挂起，直到该任务完成！&quot;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dispatch_sync(dispatch_get_main_queue(), ^&#123;//该语句不能放到主线程中</span><br><span class="line">    NSLog(@&quot;%@&quot;,[NSThread currentThread]);</span><br><span class="line">    NSLog(@&quot;执行了一个在主串行队列上创建的同步任务，该任务被交付到主串行d队列。然而它照成了死锁，并不会执行&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^&#123;//并行队列上提交异步任务，该任务被提交到子线程后返回...</span><br><span class="line">    dispatch_sync(dispatch_get_main_queue(), ^&#123;//该语句不能放到主线程中</span><br><span class="line">        NSLog(@&quot;%@&quot;,[NSThread currentThread]);</span><br><span class="line">        NSLog(@&quot;执行了一个在主串行队列上创建的同步任务，该任务被交付到主串行。此时子线程将挂起，直到该任务完成！&quot;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>参考链接：<br><br><a href="http://www.cocoachina.com/ios/20160201/15179.html" target="_blank" rel="external">主要参考博文</a><br><br><a href="http://www.cocoachina.com/ios/20140428/8248.html" target="_blank" rel="external">讲解GCD深入一点的博文</a><br><br><a href="http://www.cocoachina.com/game/20151201/14517.html" target="_blank" rel="external">如何写好一个NSOperation的子类</a><br><br><a href="http://www.cocoachina.com/ios/20151117/14225.html" target="_blank" rel="external">自定义一个OperationQueue，探究GCD调度队列实现机制</a></p>
 
       
@@ -392,6 +392,10 @@ GCD：将任务放在block中、创建和使用dispatch_queue_t的方式实现�
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/21/生命如歌：我喜欢的样子你都有/" rel="prev" title="生命如歌：我喜欢的样子你都有">
+                生命如歌：我喜欢的样子你都有 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -459,7 +463,7 @@ GCD：将任务放在block中、创建和使用dispatch_queue_t的方式实现�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
