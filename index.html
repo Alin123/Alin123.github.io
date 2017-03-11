@@ -239,6 +239,124 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/11/Js中的事件/" itemprop="url">
+                  Js中的事件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-11T12:23:08+08:00" content="2017-03-11">
+              2017-03-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>永远不屈于命运的抗争……<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE Html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;事件&lt;/title&gt;</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot; src=&quot;./Util.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot; src=&quot;./script.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;!-- 事件流:描述的是从页面中接受事件的顺序 --&gt;</span><br><span class="line">	&lt;!-- 1事件冒泡（IE）: 即事件最开始由最具体的元素（文档中嵌套层次最深的那个节点）接收，然后逐级向上传播至最不具体的那个节点。 --&gt;</span><br><span class="line">	&lt;!-- 2事件捕获: 不太具体的节点应该更早的接收到事件，而最具体的节点最后接收到事件。 --&gt;</span><br><span class="line">	&lt;div id=&quot;box&quot;&gt;</span><br><span class="line">		&lt;!-- 事件处理程序 --&gt;</span><br><span class="line">		&lt;!-- 1 HTML事件处理程序：标签关联的事件直接写在HTML文档中。弊端是耦合度高。 --&gt;</span><br><span class="line">		&lt;input type=&quot;button&quot; value=&quot;button_1&quot; id=&quot;btn1&quot; onclick=&quot;showMessage()&quot;&gt;</span><br><span class="line">		&lt;!-- 2 DOM0级事件处理程序：把一个函数赋值给一个事件的处理程序属性。优点：简单、跨浏览器 --&gt;</span><br><span class="line">		&lt;input type=&quot;button&quot; value=&quot;button_2&quot; id=&quot;btn2&quot;&gt;</span><br><span class="line">		&lt;!-- 3 DOM2级事件处理程序：定义两个方法addEventListener()和removeEventListener()用于处理指定和删除事件处理程序的操作。他们要接收三个参数：要处理的事件名、作为事件处理程序的函数、触发的阶段 --&gt;</span><br><span class="line">		&lt;input type=&quot;button&quot; value=&quot;button_3&quot; id=&quot;btn3&quot;&gt;</span><br><span class="line">		&lt;!-- 4 IE事件处理程序：定义的两个方法是attachEvent()和detachEvent()他们要接收两个个参数：要处理的事件名、作为事件处理程序的函数 --&gt;</span><br><span class="line">		&lt;input type=&quot;button&quot; value=&quot;button_4&quot; id=&quot;btn4&quot;&gt;</span><br><span class="line">		&lt;!-- 5 跨浏览器事件处理程序：运用能力检测，通过2、3、4将事件添加到标签上 --&gt;</span><br><span class="line">		&lt;input type=&quot;button&quot; value=&quot;button_5&quot; id=&quot;btn5&quot;&gt;</span><br><span class="line"></span><br><span class="line">		&lt;!-- 事件对象：在触发DOM上的事件时都会产生一个对象，包含了事件相关的信息 --&gt;</span><br><span class="line">		&lt;!-- DOM中事件对象event的重要属性和方法：type(事件类型)，target(事件发生的标签);</span><br><span class="line">		                                     stopPropagation()阻止事件冒泡，preventDefault()取消事件的默认行为 --&gt;</span><br><span class="line">		&lt;!-- DOM中事件对象event的重要属性和方法：type(事件类型)，srcElement(事件发生的标签);</span><br><span class="line">		                                     cacelBubble(是否阻止事件冒泡)，returnValue(是否取消事件的默认行为) --&gt;</span><br><span class="line">		&lt;a href=&quot;www.baidu.com&quot;&gt;该标签的跳转被取消了&lt;/a&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>Util.js文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">var eventUtil = &#123;</span><br><span class="line">	    //  给元素指定的操作添加事件</span><br><span class="line">		addHandler:function(element,type,handler) &#123;</span><br><span class="line">			if (element.addEventListener) &#123;</span><br><span class="line">				element.addEventListener(type,handler,false);</span><br><span class="line">			&#125; else if (element.attachEvent) &#123;</span><br><span class="line">				element.attachEvent(type,handler);</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				element[&apos;on&apos;+type] = handler;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">	    // 移除事件绑定</span><br><span class="line">		removeHandler:function(element,type,handler) &#123;</span><br><span class="line">			if (element.removeEventListener) &#123;</span><br><span class="line">				element.removeEventListener(type,handler,false);</span><br><span class="line">			&#125; else if (element.detachEvent) &#123;</span><br><span class="line">				element.detachEvent(element,handler);</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				element[&apos;on&apos;+type] = null;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		// 获取事件</span><br><span class="line">		getEvent:function(event) &#123;</span><br><span class="line">			return event||window.event;</span><br><span class="line">		&#125;,</span><br><span class="line">		// 获取事件类型</span><br><span class="line">		getType:function(event) &#123;</span><br><span class="line">			return event.type;</span><br><span class="line">		&#125;,</span><br><span class="line">		// 获取事件作用的元素</span><br><span class="line">		getElement:function(event) &#123;</span><br><span class="line">			return event.target?event.target:event.srcElement;</span><br><span class="line">		&#125;,</span><br><span class="line">		// 阻止事件冒泡（父视图也想应该事件）</span><br><span class="line">		preventDefault:function(event) &#123;</span><br><span class="line">			if (event.preventDefault) &#123;</span><br><span class="line">				event.preventDefault();</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				event.returnValue=false;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		// 取消元素触发的事件的默认行为</span><br><span class="line">		stopPropagation:function(event) &#123;</span><br><span class="line">			if (event.stopPropagation) &#123;</span><br><span class="line">				event.stopPropagation();</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				event.cancelBubble=true;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>script.js文件…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">function showMes (event) &#123;</span><br><span class="line">	alert(event.type);</span><br><span class="line">	alert(event.target);</span><br><span class="line">	event.stopPropagation();</span><br><span class="line">&#125;</span><br><span class="line">function showBox(event) &#123;</span><br><span class="line">	alert(this);</span><br><span class="line">&#125;</span><br><span class="line">function showMessage() &#123;</span><br><span class="line">	alert(&apos;hello word!&apos;);</span><br><span class="line">&#125;</span><br><span class="line">function stopGoto(event) &#123;</span><br><span class="line">	alert(&apos;不能跳转的a标签&apos;);</span><br><span class="line">	event.stopPropagation();</span><br><span class="line">	event.preventDefault();</span><br><span class="line">&#125;</span><br><span class="line">window.onload = function() &#123;</span><br><span class="line">	var btn2 = document.getElementById(&apos;btn2&apos;);</span><br><span class="line">	btn2.onclick = function () &#123;</span><br><span class="line">		alert(&apos;通过DOM0级添加的事件！&apos;);</span><br><span class="line">	&#125;;</span><br><span class="line">	btn2.onClick=null;</span><br><span class="line">	// DOM2级事件</span><br><span class="line">	var btn3 = document.getElementById(&apos;btn3&apos;);</span><br><span class="line">	btn3.addEventListener(&apos;click&apos;,showMessage,false);</span><br><span class="line">	btn3.removeEventListener(&apos;click&apos;,showMessage,false);</span><br><span class="line">	btn3.addEventListener(&apos;click&apos;,function()&#123;</span><br><span class="line">		alert(this.value);</span><br><span class="line">	&#125;,false);</span><br><span class="line">	// for IE</span><br><span class="line">	// var btn4 = document.getElementById(&apos;btn4&apos;);</span><br><span class="line">	// btn4.attachEvent(&apos;onclick&apos;,showMessage);</span><br><span class="line">	// btn4.detachEvent(&apos;onclick&apos;,showMessage);</span><br><span class="line"></span><br><span class="line">	var btn5=document.getElementById(&apos;btn5&apos;);</span><br><span class="line">	eventUtil.addHandler(btn5,&apos;click&apos;,showMes);</span><br><span class="line">	var box=document.getElementById(&apos;box&apos;);</span><br><span class="line">	eventUtil.addHandler(box,&apos;click&apos;,showBox);</span><br><span class="line">	var a=document.getElementsByTagName(&apos;a&apos;)[0];</span><br><span class="line">	eventUtil.addHandler(a,&apos;click&apos;,stopGoto);</span><br><span class="line"></span><br><span class="line">	eventUtil.addHandler(a,&apos;click&apos;,function(e) &#123;</span><br><span class="line">		e = eventUtil.getEvent(e);</span><br><span class="line">		alert(eventUtil.getType(e));</span><br><span class="line">		alert(eventUtil.getElement(e).nodeName);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/02/生命如歌：离别/" itemprop="url">
                   生命如歌：离别
                 </a>
@@ -1302,127 +1420,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/07/生命如歌1/" itemprop="url">
-                  生命如歌：想象力
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-07T19:03:05+08:00" content="2016-06-07">
-              2016-06-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>6月7日 晴<br>晚上下了一阵大雨。今天早上，清爽的空气又一次滋润了帝都北京。<br>上班的路上，看到潮湿的地面，低洼的地方还会有一汪水。突然想到小时候听到的一首歌”快点告诉你”，于是根据前两句歌词”下了一整夜的雨，早起就是好天气”上网搜了一下，原来是动画城的主题歌，怪不得虽然没有特意听过这首歌却也能哼的上来。<br>说到动画城让我想起可一部极具想象力的动画片”马丁的早晨”，主人公马丁每天早上醒来都会扮演一个全新的、光怪陆离的(也许在当时的我看来那是真的会发生在在生活中的事情)角色，然后完成一次惊险、刺激的冒险…<br>对于一个向来语文很糟糕的人来说写一篇800字的作文来说简直是对大脑造成各种真实伤害。现在想来原因大概有三个：</p>
-<ol>
-<li>读书太少。对一个理工男来说也是只会对像”坏蛋是怎么炼成的”这样的小说感兴趣，而四书五经在当时读来就如同嚼蜡，看鲁迅先生的文章也是像看天书一样。</li>
-<li>没有足够的阅历。对于一个直到上大学才出过远门的人来说，行万里路在金钱和时间的维度上都是不可能实现的。见到的人也大多是亲戚、朋友或是师长，当时他们也与在忙生计的事情，或者是我并没有在意他们讲述的故事。就这样阅历的局限性在所难免了。</li>
-<li>想象力严重缺乏。想象力缺乏就是硬伤了。哦！也许不全是。多读书、多见识一些人和事就会丰富我们的想象力了呢！到那时，见到一个帽子像形状的图案，我们的第一反应也许不再是一顶帽子，而是一条吞了大象的蟒蛇呢！</li>
-</ol>
-<p>说到想象力，现在想来小时候看的最具想象力的动画片就是”马丁的早晨”，每天一个新的角色和一场全新的冒险正是多少小朋友正在经历的(或是期盼的)生活吖！就在码字的同时我回顾了这部小时侯的记忆，在现在看来它依然那么充满想象力。羡慕他每天都有一个全新的生活，羡慕他有一个爱她的罗娜(不过我有我的宝贝！)…但童话终究是童话，童话中的生活我们无非复制，童话能给我们的也许是对待生活态度，就像马丁那样，每天都是新的一天，我们都能学到新的东西，对生活都有不同的感悟，不是么！</p>
-<p>Ps:<code>快点告诉你</code>的歌词：<br>下了一整夜的雨<br>早起就是好天气<br>又在昨晚梦见你<br>我们快乐的游戏<br>都是怪我的粗心<br>责备自己太大意<br>找不见你的地址<br>可爸爸就要去邮局<br>想快点告诉你我用你送的蜡笔<br>画了幅画特快传递给你<br>快点告诉你我的十二分惦记<br>再远的路没有什么关系<br>我的心放在你那里</p>
-<p>下了一整夜的雨<br>早起就是好天气<br>又在昨晚梦见你<br>我们快乐的游戏<br>都是怪我的粗心<br>责备自己太大意<br>找不见你的地址<br>可爸爸就要去邮局<br>想快的告诉你多想天天在一起<br>研究十万个为什么的问题<br>快点告诉你明白一些大道理<br>朋友之间最看重的是情谊<br>我的心放在你那里<br>我的心放在你那里</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1468,7 +1465,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1485,7 +1482,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
