@@ -239,6 +239,132 @@
             
               
                 
+                <a class="post-title-link" href="/2017/04/17/swift的基本数据结构和控制语句/" itemprop="url">
+                  swift的基本数据结构和控制语句
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-17T11:19:49+08:00" content="2017-04-17">
+              2017-04-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let myArray:[Int] = [1, 2, 3, 4, 5]</span><br><span class="line">let newArray = myArray.map(&#123;number in 3 * number&#125;)</span><br><span class="line">newArray</span><br></pre></td></tr></table></figure>
+<h4 id="字符串和字符-String-and-Characters"><a href="#字符串和字符-String-and-Characters" class="headerlink" title="字符串和字符(String and Characters)"></a>字符串和字符(String and Characters)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var myWords = &quot;alin&quot;</span><br><span class="line">myWords += &quot; love shirley&quot;</span><br><span class="line">var yourWords = myWords //字符串是值类型(Strings are Value Type)</span><br><span class="line">myWords += &quot; !!!&quot;</span><br></pre></td></tr></table></figure>
+<p>// 当进行变量、常量赋值操作或将其当作传递给一个函数时会进行值拷贝，从而产生新的副本(yourWords)，赋值后改变myWords，yourWords不变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for character in yourWords.characters &#123;</span><br><span class="line">    print(character)</span><br><span class="line">&#125;</span><br><span class="line">yourWords.lengthOfBytes(using: .unicode)</span><br><span class="line">yourWords.lengthOfBytes(using: .utf16)</span><br><span class="line">yourWords.lengthOfBytes(using: .utf8)</span><br><span class="line">yourWords.lengthOfBytes(using: .ascii)</span><br><span class="line"></span><br><span class="line">yourWords.append(&quot; very much!&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let a = 3</span><br><span class="line">let b = 2</span><br><span class="line">let sum = &quot;\(a) + \(b) = \(a + b)&quot;//字符串插值(String Interpolation)</span><br><span class="line"></span><br><span class="line">sum.utf16</span><br><span class="line">sum.utf8</span><br><span class="line">sum.unicodeScalars</span><br><span class="line">for item in sum.unicodeScalars &#123;</span><br><span class="line">    print(&quot;\(item.value)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="集合：数组"><a href="#集合：数组" class="headerlink" title="集合：数组"></a>集合：数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var shoppingList:[String] = [&quot;Milk&quot;,&quot;Eggs&quot;]</span><br><span class="line">shoppingList.append(&quot;Flour&quot;)</span><br><span class="line">shoppingList += [&quot;Apple&quot;,&quot;Orange&quot;,&quot;Banana&quot;]</span><br><span class="line">shoppingList[0...3] = [&quot;0~3replaced&quot;]</span><br><span class="line">shoppingList</span><br><span class="line">shoppingList.insert(&quot;Bread&quot;, at: 0)</span><br><span class="line"></span><br><span class="line">for item in shoppingList &#123;</span><br><span class="line">    print(item)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (index, item) in shoppingList.enumerated() &#123;</span><br><span class="line">    print(&quot;item at \(index) is \(item)&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var threeDouble = [Double](repeating: 0.0, count: 3)</span><br></pre></td></tr></table></figure>
+<h4 id="集合：字典"><a href="#集合：字典" class="headerlink" title="集合：字典"></a>集合：字典</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var dict = [&quot;0&quot;:0, &quot;1&quot;:1, &quot;2&quot;:2]</span><br><span class="line">dict[&quot;3&quot;] = 3</span><br><span class="line">dict.updateValue(4, forKey: &quot;4&quot;)</span><br><span class="line">for (key, value) in dict &#123;</span><br><span class="line">    print(&quot;key:\(key) value:\(value)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h2><h4 id="forin语句"><a href="#forin语句" class="headerlink" title="forin语句"></a>forin语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var string = &quot;&quot;</span><br><span class="line">for i in 0..&lt;10 &#123;</span><br><span class="line">    string += String(i)</span><br><span class="line">&#125;</span><br><span class="line">string</span><br><span class="line">for character in &quot;Hello&quot;.characters &#123;</span><br><span class="line">    print(&quot;\(character)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">let finalSquare = 25</span><br><span class="line">var board = [Int](repeating: 0, count: finalSquare + 1)</span><br><span class="line">board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02;</span><br><span class="line">board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08;</span><br><span class="line"></span><br><span class="line">var square = 0</span><br><span class="line">var ran = 0</span><br><span class="line">while square &lt; finalSquare &#123;</span><br><span class="line">    ran = Int(arc4random() % 6 + 1)</span><br><span class="line">    print(ran)</span><br><span class="line">    square += ran</span><br><span class="line">    if square &lt; board.count &#123;</span><br><span class="line">        square += board[square]</span><br><span class="line">    &#125;</span><br><span class="line">    print(square)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">square = 0</span><br><span class="line">repeat &#123;</span><br><span class="line">    ran = Int(arc4random() % 6 + 1)</span><br><span class="line">    print(&quot;骰子点数：\(ran)&quot;)</span><br><span class="line">    square += ran</span><br><span class="line">    if square &lt; board.count &#123;</span><br><span class="line">        square += board[square]</span><br><span class="line">    &#125;</span><br><span class="line">    print(&quot;爬升位置：\(square)&quot;)</span><br><span class="line">&#125; while square &lt; finalSquare</span><br><span class="line"></span><br><span class="line">square = 0</span><br><span class="line">print(&quot;game start!&quot;)</span><br><span class="line">gameLoop: while square != finalSquare &#123;</span><br><span class="line">    ran = Int(arc4random() % 6 + 1)</span><br><span class="line">    print(&quot;摇出：\(ran)&quot;)</span><br><span class="line">    switch square + ran &#123;</span><br><span class="line">    case finalSquare:</span><br><span class="line">        print(&quot;胜利&quot;)</span><br><span class="line">        break gameLoop</span><br><span class="line">    case let sum where sum &gt; finalSquare:</span><br><span class="line">        print(&quot;接近终点&quot;)</span><br><span class="line">        continue gameLoop</span><br><span class="line">    default:</span><br><span class="line">        square += ran</span><br><span class="line">        print(&quot;走到了：\(square)&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="条件语句if、switch"><a href="#条件语句if、switch" class="headerlink" title="条件语句if、switch"></a>条件语句if、switch</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let character: Character = &quot;a&quot;</span><br><span class="line">switch character &#123;</span><br><span class="line">case &quot;a&quot;, &quot;e&quot;, &quot;i&quot;, &quot;o&quot;, &quot;u&quot;:</span><br><span class="line">    print(&quot;字符是元音字符&quot;)</span><br><span class="line">default:</span><br><span class="line">    print(&quot;字符是辅音字符&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="区间匹配…"><a href="#区间匹配…" class="headerlink" title="区间匹配…"></a>区间匹配…</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">let count = 10</span><br><span class="line">switch count &#123;</span><br><span class="line">case 0...9:</span><br><span class="line">    print(&quot;number is one digit&quot;)</span><br><span class="line">case 10...99:</span><br><span class="line">    print(&quot;number is two digit&quot;)</span><br><span class="line">case 100...999:</span><br><span class="line">    print(&quot;number is three digit&quot;)</span><br><span class="line">default:</span><br><span class="line">    print(&quot;more digit!&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let apoint = (1, 1)</span><br><span class="line">switch apoint &#123;</span><br><span class="line">case (0, 0):</span><br><span class="line">    print(&quot;point is at the origin&quot;)</span><br><span class="line">case (_, 0):</span><br><span class="line">    print(&quot;point is on the y-aixs&quot;)</span><br><span class="line">case (0, _):</span><br><span class="line">    print(&quot;point is on the x-aixs&quot;)</span><br><span class="line">case (-2...2, -2...2):</span><br><span class="line">    print(&quot;point is inside of the box&quot;)</span><br><span class="line">default:</span><br><span class="line">    print(&quot;point is outside of the box&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="值绑定"><a href="#值绑定" class="headerlink" title="值绑定"></a>值绑定</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let bpoint = (2, 3)</span><br><span class="line">switch bpoint &#123;</span><br><span class="line">case (let x, 0):</span><br><span class="line">    print(&quot;on the x-axis with an x value of \(x)&quot;)</span><br><span class="line">case (0, let y):</span><br><span class="line">    print(&quot;on the y-axis with an y value of \(y)&quot;)</span><br><span class="line">case let (x, y):</span><br><span class="line">    print(&quot;somewhere else at (\(x), \(y))&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="where条件匹配"><a href="#where条件匹配" class="headerlink" title="where条件匹配"></a>where条件匹配</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let cpoint = (-3, 3)</span><br><span class="line">switch cpoint &#123;</span><br><span class="line">case let (x, y) where x + y == 0:</span><br><span class="line">    print(&quot;(\(x), \(y)) is on the line y = -x&quot;)</span><br><span class="line">case let (x, y) where x - y == 0:</span><br><span class="line">    print(&quot;(\(x), \(y)) is on the line y = x&quot;)</span><br><span class="line">case let (x, y):</span><br><span class="line">    print(&quot;(\(x), \(y)) is just some arbitrary point&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="控制转移语句break、continue等"><a href="#控制转移语句break、continue等" class="headerlink" title="控制转移语句break、continue等"></a>控制转移语句break、continue等</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">let aSymbol: Character = &quot;三&quot;</span><br><span class="line">var possibleIntegerValue: Int?</span><br><span class="line">switch aSymbol &#123;</span><br><span class="line">case &quot;1&quot;, &quot;一&quot;, &quot;壹&quot;:</span><br><span class="line">    possibleIntegerValue = 1</span><br><span class="line">case &quot;2&quot;, &quot;二&quot;, &quot;贰&quot;:</span><br><span class="line">    possibleIntegerValue = 2</span><br><span class="line">case &quot;3&quot;, &quot;三&quot;, &quot;叁&quot;:</span><br><span class="line">    possibleIntegerValue = 3</span><br><span class="line">default:</span><br><span class="line">    break;//跳出switch，possibleIntegerValue为nil</span><br><span class="line">&#125;</span><br><span class="line">if let index = possibleIntegerValue &#123;</span><br><span class="line">    print(&quot;find it at \(index)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/11/Js中的事件/" itemprop="url">
                   Js中的事件
                 </a>
@@ -1211,220 +1337,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/12/CSS层叠样式表之边框和背景/" itemprop="url">
-                  CSS层叠样式表之边框和背景
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-12T16:48:30+08:00" content="2016-06-12">
-              2016-06-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="使用边框和背景"><a href="#使用边框和背景" class="headerlink" title=" 使用边框和背景"></a><1> 使用边框和背景</1></h5><p>边框</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">key</th>
-<th style="text-align:center">value</th>
-<th style="text-align:center">description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">border-width<br>border-top-width<br>border-left-width<br>border-bottom-width<br>border-right-width</td>
-<td style="text-align:center">5px</td>
-<td style="text-align:center">边框的宽度</td>
-</tr>
-<tr>
-<td style="text-align:left">border-style<br>border-top-style<br>border-left-style<br>border-bottom-style<br>border-right-style</td>
-<td style="text-align:center">none、dashed、dotted、double、groove、insert、outset、ridge、solid</td>
-<td style="text-align:center">边框的样式</td>
-</tr>
-<tr>
-<td style="text-align:left">border-color<br>border-top-color<br>border-left-color<br>border-bottom-color<br>border-right-color</td>
-<td style="text-align:center">black</td>
-<td style="text-align:center">边框颜色</td>
-</tr>
-<tr>
-<td style="text-align:left">border-radius<br>border-top-left-radius<br>border-top-right-radius<br>border-bottom-left-radius<br>border-bottom-right-radius</td>
-<td style="text-align:center">20px 15px</td>
-<td style="text-align:center">边框的圆角，使用椭圆来定义圆角</td>
-</tr>
-<tr>
-<td style="text-align:left">border-image</td>
-<td style="text-align:center">url(xxx.png) 30 / 50px round</td>
-<td style="text-align:center">将图像用做边框</td>
-</tr>
-<tr>
-<td style="text-align:left">border-top<br>border-left<br>border-right<br>border-bottom</td>
-<td style="text-align:center">&lt;宽度&gt; &lt;样式&gt; &lt;颜色&gt;</td>
-<td style="text-align:center">某条边的样式，border简写属性</td>
-</tr>
-<tr>
-<td style="text-align:left">border</td>
-<td style="text-align:center">&lt;宽度&gt; &lt;样式&gt; &lt;颜色&gt;</td>
-<td style="text-align:center">边框样式，border简写属性</td>
-</tr>
-</tbody>
-</table>
-<p>背景</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">key</th>
-<th style="text-align:center">value</th>
-<th style="text-align:center">description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">background-color</td>
-<td style="text-align:center">lightgray</td>
-<td style="text-align:center">元素背景色</td>
-</tr>
-<tr>
-<td style="text-align:left">background-image</td>
-<td style="text-align:center">url(xxx.png)</td>
-<td style="text-align:center">背景图像</td>
-</tr>
-<tr>
-<td style="text-align:left">background-size</td>
-<td style="text-align:center">40px 40px</td>
-<td style="text-align:center">背景图像尺寸</td>
-</tr>
-<tr>
-<td style="text-align:left">background-position</td>
-<td style="text-align:center">30px 10px</td>
-<td style="text-align:center">背景图像位置(no-repeat)</td>
-</tr>
-<tr>
-<td style="text-align:left">background-repeat</td>
-<td style="text-align:center">repeat-x、repeat-y、repeat、space、round、no-repeat</td>
-<td style="text-align:center">图像重复方式</td>
-</tr>
-<tr>
-<td style="text-align:left">background-origin</td>
-<td style="text-align:center">border-box、content-box</td>
-<td style="text-align:center">背景图像尺寸</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>code</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;使用边框和背景&lt;/title&gt;</span><br><span class="line">        &lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">            p &#123;</span><br><span class="line">                border-width: 30px;</span><br><span class="line">                border-style: double;</span><br><span class="line">                border-color: lightgray;</span><br><span class="line">                </span><br><span class="line">                border-top-width: 10px;</span><br><span class="line">                border-left-width: 20px;</span><br><span class="line">                </span><br><span class="line">                border-right-style: inset;</span><br><span class="line">                border-bottom-style: outset;</span><br><span class="line">                </span><br><span class="line">                border-top-left-radius: 30px 30px;</span><br><span class="line">                border-bottom-right-radius: 20px 20px;</span><br><span class="line">            &#125;</span><br><span class="line">            #border_image &#123;</span><br><span class="line">                border-width: 30px;</span><br><span class="line">                border-image: url(./css_border_image_1.png) 30 / 30px round;</span><br><span class="line">            &#125;</span><br><span class="line">            #background_image &#123;</span><br><span class="line">                border-width: 20px;</span><br><span class="line">                border-style: dotted;</span><br><span class="line">                </span><br><span class="line">                background-image: url(./css_background_image_1.png);</span><br><span class="line">                background-size: 80px 80px;</span><br><span class="line">                background-repeat: no-repeat;</span><br><span class="line">                background-origin: content-box;</span><br><span class="line">                background-position: 40px 0px;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            如果不去遍历世界，我们就不知道什么是我们精神和感情的寄托，但我们一旦遍历了世界，却发现我们再也无法回到那美丽的地方去了。当我们开始寻求，我们就已经失去，而我们不开始寻求，我们根本无法知道自己身边的一切是如此可贵。</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;border_image&quot;&gt;</span><br><span class="line">            我的那朵玫瑰，别人会以为她和你们一样，但她单独一朵就胜过你们全部。因为她是我浇灌的。因为她是我放在花罩中的。因为她是我用屏风保护起来的。因为她身上的毛毛虫是我除掉的。因为我倾听过她的哀怨，她的吹嘘，有时甚至是她的沉默。因为她是我的玫瑰。</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;background_image&quot;&gt;</span><br><span class="line">            狐狸说：“对我来说，你只是一个小男孩，就像其他成千上万个小男孩一样没有什么两样。我不需要你。你也不需要我。对你来说，我也只是一只狐狸，和其他成千上万的狐狸没有什么不同。但是，如果你驯养了我，我们就会彼此需要。对我来说，你就是我的世界里独一无二的了；我对你来说，也是你的世界里的唯一了。”</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>persentation</p>
-</blockquote>
-<p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-css-1.png" alt="css效果图"></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1465,7 +1382,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1482,7 +1399,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

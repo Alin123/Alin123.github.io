@@ -239,6 +239,215 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/12/CSS层叠样式表之边框和背景/" itemprop="url">
+                  CSS层叠样式表之边框和背景
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-12T16:48:30+08:00" content="2016-06-12">
+              2016-06-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="使用边框和背景"><a href="#使用边框和背景" class="headerlink" title=" 使用边框和背景"></a><1> 使用边框和背景</1></h5><p>边框</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">key</th>
+<th style="text-align:center">value</th>
+<th style="text-align:center">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">border-width<br>border-top-width<br>border-left-width<br>border-bottom-width<br>border-right-width</td>
+<td style="text-align:center">5px</td>
+<td style="text-align:center">边框的宽度</td>
+</tr>
+<tr>
+<td style="text-align:left">border-style<br>border-top-style<br>border-left-style<br>border-bottom-style<br>border-right-style</td>
+<td style="text-align:center">none、dashed、dotted、double、groove、insert、outset、ridge、solid</td>
+<td style="text-align:center">边框的样式</td>
+</tr>
+<tr>
+<td style="text-align:left">border-color<br>border-top-color<br>border-left-color<br>border-bottom-color<br>border-right-color</td>
+<td style="text-align:center">black</td>
+<td style="text-align:center">边框颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">border-radius<br>border-top-left-radius<br>border-top-right-radius<br>border-bottom-left-radius<br>border-bottom-right-radius</td>
+<td style="text-align:center">20px 15px</td>
+<td style="text-align:center">边框的圆角，使用椭圆来定义圆角</td>
+</tr>
+<tr>
+<td style="text-align:left">border-image</td>
+<td style="text-align:center">url(xxx.png) 30 / 50px round</td>
+<td style="text-align:center">将图像用做边框</td>
+</tr>
+<tr>
+<td style="text-align:left">border-top<br>border-left<br>border-right<br>border-bottom</td>
+<td style="text-align:center">&lt;宽度&gt; &lt;样式&gt; &lt;颜色&gt;</td>
+<td style="text-align:center">某条边的样式，border简写属性</td>
+</tr>
+<tr>
+<td style="text-align:left">border</td>
+<td style="text-align:center">&lt;宽度&gt; &lt;样式&gt; &lt;颜色&gt;</td>
+<td style="text-align:center">边框样式，border简写属性</td>
+</tr>
+</tbody>
+</table>
+<p>背景</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">key</th>
+<th style="text-align:center">value</th>
+<th style="text-align:center">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">background-color</td>
+<td style="text-align:center">lightgray</td>
+<td style="text-align:center">元素背景色</td>
+</tr>
+<tr>
+<td style="text-align:left">background-image</td>
+<td style="text-align:center">url(xxx.png)</td>
+<td style="text-align:center">背景图像</td>
+</tr>
+<tr>
+<td style="text-align:left">background-size</td>
+<td style="text-align:center">40px 40px</td>
+<td style="text-align:center">背景图像尺寸</td>
+</tr>
+<tr>
+<td style="text-align:left">background-position</td>
+<td style="text-align:center">30px 10px</td>
+<td style="text-align:center">背景图像位置(no-repeat)</td>
+</tr>
+<tr>
+<td style="text-align:left">background-repeat</td>
+<td style="text-align:center">repeat-x、repeat-y、repeat、space、round、no-repeat</td>
+<td style="text-align:center">图像重复方式</td>
+</tr>
+<tr>
+<td style="text-align:left">background-origin</td>
+<td style="text-align:center">border-box、content-box</td>
+<td style="text-align:center">背景图像尺寸</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;HTML&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;使用边框和背景&lt;/title&gt;</span><br><span class="line">        &lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">            p &#123;</span><br><span class="line">                border-width: 30px;</span><br><span class="line">                border-style: double;</span><br><span class="line">                border-color: lightgray;</span><br><span class="line">                </span><br><span class="line">                border-top-width: 10px;</span><br><span class="line">                border-left-width: 20px;</span><br><span class="line">                </span><br><span class="line">                border-right-style: inset;</span><br><span class="line">                border-bottom-style: outset;</span><br><span class="line">                </span><br><span class="line">                border-top-left-radius: 30px 30px;</span><br><span class="line">                border-bottom-right-radius: 20px 20px;</span><br><span class="line">            &#125;</span><br><span class="line">            #border_image &#123;</span><br><span class="line">                border-width: 30px;</span><br><span class="line">                border-image: url(./css_border_image_1.png) 30 / 30px round;</span><br><span class="line">            &#125;</span><br><span class="line">            #background_image &#123;</span><br><span class="line">                border-width: 20px;</span><br><span class="line">                border-style: dotted;</span><br><span class="line">                </span><br><span class="line">                background-image: url(./css_background_image_1.png);</span><br><span class="line">                background-size: 80px 80px;</span><br><span class="line">                background-repeat: no-repeat;</span><br><span class="line">                background-origin: content-box;</span><br><span class="line">                background-position: 40px 0px;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            如果不去遍历世界，我们就不知道什么是我们精神和感情的寄托，但我们一旦遍历了世界，却发现我们再也无法回到那美丽的地方去了。当我们开始寻求，我们就已经失去，而我们不开始寻求，我们根本无法知道自己身边的一切是如此可贵。</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;border_image&quot;&gt;</span><br><span class="line">            我的那朵玫瑰，别人会以为她和你们一样，但她单独一朵就胜过你们全部。因为她是我浇灌的。因为她是我放在花罩中的。因为她是我用屏风保护起来的。因为她身上的毛毛虫是我除掉的。因为我倾听过她的哀怨，她的吹嘘，有时甚至是她的沉默。因为她是我的玫瑰。</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p id=&quot;background_image&quot;&gt;</span><br><span class="line">            狐狸说：“对我来说，你只是一个小男孩，就像其他成千上万个小男孩一样没有什么两样。我不需要你。你也不需要我。对你来说，我也只是一只狐狸，和其他成千上万的狐狸没有什么不同。但是，如果你驯养了我，我们就会彼此需要。对我来说，你就是我的世界里独一无二的了；我对你来说，也是你的世界里的唯一了。”</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>persentation</p>
+</blockquote>
+<p><img src="http://o7nzfbf8y.bkt.clouddn.com/images-blog-css-1.png" alt="css效果图"></p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/07/生命如歌1/" itemprop="url">
                   生命如歌：想象力
                 </a>
@@ -1597,113 +1806,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/10/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-10T23:17:38+08:00" content="2016-04-10">
-              2016-04-10
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1744,7 +1851,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1761,7 +1868,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

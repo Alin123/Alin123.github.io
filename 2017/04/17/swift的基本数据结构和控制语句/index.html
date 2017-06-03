@@ -1,0 +1,603 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="swift," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="基本数据结构123let myArray:[Int] = [1, 2, 3, 4, 5]let newArray = myArray.map(&amp;#123;number in 3 * number&amp;#125;)newArray
+字符串和字符(String and Characters)1234var myWords = &amp;quot;alin&amp;quot;myWords += &amp;quot; love s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift的基本数据结构和控制语句">
+<meta property="og:url" content="http://yoursite.com/2017/04/17/swift的基本数据结构和控制语句/index.html">
+<meta property="og:site_name" content="Alin的博客">
+<meta property="og:description" content="基本数据结构123let myArray:[Int] = [1, 2, 3, 4, 5]let newArray = myArray.map(&amp;#123;number in 3 * number&amp;#125;)newArray
+字符串和字符(String and Characters)1234var myWords = &amp;quot;alin&amp;quot;myWords += &amp;quot; love s">
+<meta property="og:updated_time" content="2017-06-03T03:23:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift的基本数据结构和控制语句">
+<meta name="twitter:description" content="基本数据结构123let myArray:[Int] = [1, 2, 3, 4, 5]let newArray = myArray.map(&amp;#123;number in 3 * number&amp;#125;)newArray
+字符串和字符(String and Characters)1234var myWords = &amp;quot;alin&amp;quot;myWords += &amp;quot; love s">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> swift的基本数据结构和控制语句 | Alin的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Alin的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">时间教会了我们什么... 坦然的面对生活吗？我想是的～</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                swift的基本数据结构和控制语句
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-17T11:19:49+08:00" content="2017-04-17">
+              2017-04-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let myArray:[Int] = [1, 2, 3, 4, 5]</span><br><span class="line">let newArray = myArray.map(&#123;number in 3 * number&#125;)</span><br><span class="line">newArray</span><br></pre></td></tr></table></figure>
+<h4 id="字符串和字符-String-and-Characters"><a href="#字符串和字符-String-and-Characters" class="headerlink" title="字符串和字符(String and Characters)"></a>字符串和字符(String and Characters)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var myWords = &quot;alin&quot;</span><br><span class="line">myWords += &quot; love shirley&quot;</span><br><span class="line">var yourWords = myWords //字符串是值类型(Strings are Value Type)</span><br><span class="line">myWords += &quot; !!!&quot;</span><br></pre></td></tr></table></figure>
+<p>// 当进行变量、常量赋值操作或将其当作传递给一个函数时会进行值拷贝，从而产生新的副本(yourWords)，赋值后改变myWords，yourWords不变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for character in yourWords.characters &#123;</span><br><span class="line">    print(character)</span><br><span class="line">&#125;</span><br><span class="line">yourWords.lengthOfBytes(using: .unicode)</span><br><span class="line">yourWords.lengthOfBytes(using: .utf16)</span><br><span class="line">yourWords.lengthOfBytes(using: .utf8)</span><br><span class="line">yourWords.lengthOfBytes(using: .ascii)</span><br><span class="line"></span><br><span class="line">yourWords.append(&quot; very much!&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let a = 3</span><br><span class="line">let b = 2</span><br><span class="line">let sum = &quot;\(a) + \(b) = \(a + b)&quot;//字符串插值(String Interpolation)</span><br><span class="line"></span><br><span class="line">sum.utf16</span><br><span class="line">sum.utf8</span><br><span class="line">sum.unicodeScalars</span><br><span class="line">for item in sum.unicodeScalars &#123;</span><br><span class="line">    print(&quot;\(item.value)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="集合：数组"><a href="#集合：数组" class="headerlink" title="集合：数组"></a>集合：数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var shoppingList:[String] = [&quot;Milk&quot;,&quot;Eggs&quot;]</span><br><span class="line">shoppingList.append(&quot;Flour&quot;)</span><br><span class="line">shoppingList += [&quot;Apple&quot;,&quot;Orange&quot;,&quot;Banana&quot;]</span><br><span class="line">shoppingList[0...3] = [&quot;0~3replaced&quot;]</span><br><span class="line">shoppingList</span><br><span class="line">shoppingList.insert(&quot;Bread&quot;, at: 0)</span><br><span class="line"></span><br><span class="line">for item in shoppingList &#123;</span><br><span class="line">    print(item)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (index, item) in shoppingList.enumerated() &#123;</span><br><span class="line">    print(&quot;item at \(index) is \(item)&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var threeDouble = [Double](repeating: 0.0, count: 3)</span><br></pre></td></tr></table></figure>
+<h4 id="集合：字典"><a href="#集合：字典" class="headerlink" title="集合：字典"></a>集合：字典</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var dict = [&quot;0&quot;:0, &quot;1&quot;:1, &quot;2&quot;:2]</span><br><span class="line">dict[&quot;3&quot;] = 3</span><br><span class="line">dict.updateValue(4, forKey: &quot;4&quot;)</span><br><span class="line">for (key, value) in dict &#123;</span><br><span class="line">    print(&quot;key:\(key) value:\(value)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h2><h4 id="forin语句"><a href="#forin语句" class="headerlink" title="forin语句"></a>forin语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var string = &quot;&quot;</span><br><span class="line">for i in 0..&lt;10 &#123;</span><br><span class="line">    string += String(i)</span><br><span class="line">&#125;</span><br><span class="line">string</span><br><span class="line">for character in &quot;Hello&quot;.characters &#123;</span><br><span class="line">    print(&quot;\(character)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">let finalSquare = 25</span><br><span class="line">var board = [Int](repeating: 0, count: finalSquare + 1)</span><br><span class="line">board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02;</span><br><span class="line">board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08;</span><br><span class="line"></span><br><span class="line">var square = 0</span><br><span class="line">var ran = 0</span><br><span class="line">while square &lt; finalSquare &#123;</span><br><span class="line">    ran = Int(arc4random() % 6 + 1)</span><br><span class="line">    print(ran)</span><br><span class="line">    square += ran</span><br><span class="line">    if square &lt; board.count &#123;</span><br><span class="line">        square += board[square]</span><br><span class="line">    &#125;</span><br><span class="line">    print(square)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">square = 0</span><br><span class="line">repeat &#123;</span><br><span class="line">    ran = Int(arc4random() % 6 + 1)</span><br><span class="line">    print(&quot;骰子点数：\(ran)&quot;)</span><br><span class="line">    square += ran</span><br><span class="line">    if square &lt; board.count &#123;</span><br><span class="line">        square += board[square]</span><br><span class="line">    &#125;</span><br><span class="line">    print(&quot;爬升位置：\(square)&quot;)</span><br><span class="line">&#125; while square &lt; finalSquare</span><br><span class="line"></span><br><span class="line">square = 0</span><br><span class="line">print(&quot;game start!&quot;)</span><br><span class="line">gameLoop: while square != finalSquare &#123;</span><br><span class="line">    ran = Int(arc4random() % 6 + 1)</span><br><span class="line">    print(&quot;摇出：\(ran)&quot;)</span><br><span class="line">    switch square + ran &#123;</span><br><span class="line">    case finalSquare:</span><br><span class="line">        print(&quot;胜利&quot;)</span><br><span class="line">        break gameLoop</span><br><span class="line">    case let sum where sum &gt; finalSquare:</span><br><span class="line">        print(&quot;接近终点&quot;)</span><br><span class="line">        continue gameLoop</span><br><span class="line">    default:</span><br><span class="line">        square += ran</span><br><span class="line">        print(&quot;走到了：\(square)&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="条件语句if、switch"><a href="#条件语句if、switch" class="headerlink" title="条件语句if、switch"></a>条件语句if、switch</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let character: Character = &quot;a&quot;</span><br><span class="line">switch character &#123;</span><br><span class="line">case &quot;a&quot;, &quot;e&quot;, &quot;i&quot;, &quot;o&quot;, &quot;u&quot;:</span><br><span class="line">    print(&quot;字符是元音字符&quot;)</span><br><span class="line">default:</span><br><span class="line">    print(&quot;字符是辅音字符&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="区间匹配…"><a href="#区间匹配…" class="headerlink" title="区间匹配…"></a>区间匹配…</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">let count = 10</span><br><span class="line">switch count &#123;</span><br><span class="line">case 0...9:</span><br><span class="line">    print(&quot;number is one digit&quot;)</span><br><span class="line">case 10...99:</span><br><span class="line">    print(&quot;number is two digit&quot;)</span><br><span class="line">case 100...999:</span><br><span class="line">    print(&quot;number is three digit&quot;)</span><br><span class="line">default:</span><br><span class="line">    print(&quot;more digit!&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let apoint = (1, 1)</span><br><span class="line">switch apoint &#123;</span><br><span class="line">case (0, 0):</span><br><span class="line">    print(&quot;point is at the origin&quot;)</span><br><span class="line">case (_, 0):</span><br><span class="line">    print(&quot;point is on the y-aixs&quot;)</span><br><span class="line">case (0, _):</span><br><span class="line">    print(&quot;point is on the x-aixs&quot;)</span><br><span class="line">case (-2...2, -2...2):</span><br><span class="line">    print(&quot;point is inside of the box&quot;)</span><br><span class="line">default:</span><br><span class="line">    print(&quot;point is outside of the box&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="值绑定"><a href="#值绑定" class="headerlink" title="值绑定"></a>值绑定</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let bpoint = (2, 3)</span><br><span class="line">switch bpoint &#123;</span><br><span class="line">case (let x, 0):</span><br><span class="line">    print(&quot;on the x-axis with an x value of \(x)&quot;)</span><br><span class="line">case (0, let y):</span><br><span class="line">    print(&quot;on the y-axis with an y value of \(y)&quot;)</span><br><span class="line">case let (x, y):</span><br><span class="line">    print(&quot;somewhere else at (\(x), \(y))&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="where条件匹配"><a href="#where条件匹配" class="headerlink" title="where条件匹配"></a>where条件匹配</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let cpoint = (-3, 3)</span><br><span class="line">switch cpoint &#123;</span><br><span class="line">case let (x, y) where x + y == 0:</span><br><span class="line">    print(&quot;(\(x), \(y)) is on the line y = -x&quot;)</span><br><span class="line">case let (x, y) where x - y == 0:</span><br><span class="line">    print(&quot;(\(x), \(y)) is on the line y = x&quot;)</span><br><span class="line">case let (x, y):</span><br><span class="line">    print(&quot;(\(x), \(y)) is just some arbitrary point&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="控制转移语句break、continue等"><a href="#控制转移语句break、continue等" class="headerlink" title="控制转移语句break、continue等"></a>控制转移语句break、continue等</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">let aSymbol: Character = &quot;三&quot;</span><br><span class="line">var possibleIntegerValue: Int?</span><br><span class="line">switch aSymbol &#123;</span><br><span class="line">case &quot;1&quot;, &quot;一&quot;, &quot;壹&quot;:</span><br><span class="line">    possibleIntegerValue = 1</span><br><span class="line">case &quot;2&quot;, &quot;二&quot;, &quot;贰&quot;:</span><br><span class="line">    possibleIntegerValue = 2</span><br><span class="line">case &quot;3&quot;, &quot;三&quot;, &quot;叁&quot;:</span><br><span class="line">    possibleIntegerValue = 3</span><br><span class="line">default:</span><br><span class="line">    break;//跳出switch，possibleIntegerValue为nil</span><br><span class="line">&#125;</span><br><span class="line">if let index = possibleIntegerValue &#123;</span><br><span class="line">    print(&quot;find it at \(index)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/swift/" rel="tag">#swift</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/11/Js中的事件/" rel="next" title="Js中的事件">
+                <i class="fa fa-chevron-left"></i> Js中的事件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://o7nzfbf8y.bkt.clouddn.com/avatar.png"
+               alt="Alin" />
+          <p class="site-author-name" itemprop="name">Alin</p>
+          <p class="site-description motion-element" itemprop="description">我的职业？你知道的，现在想来，我一直想当个面包师的。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据结构"><span class="nav-number">1.</span> <span class="nav-text">基本数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串和字符-String-and-Characters"><span class="nav-number">1.0.1.</span> <span class="nav-text">字符串和字符(String and Characters)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整型"><span class="nav-number">1.0.2.</span> <span class="nav-text">整型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集合：数组"><span class="nav-number">1.0.3.</span> <span class="nav-text">集合：数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集合：字典"><span class="nav-number">1.0.4.</span> <span class="nav-text">集合：字典</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制流"><span class="nav-number">2.</span> <span class="nav-text">控制流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#forin语句"><span class="nav-number">2.0.1.</span> <span class="nav-text">forin语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#循环语句"><span class="nav-number">2.0.2.</span> <span class="nav-text">循环语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件语句if、switch"><span class="nav-number">2.0.3.</span> <span class="nav-text">条件语句if、switch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区间匹配…"><span class="nav-number">2.0.4.</span> <span class="nav-text">区间匹配…</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#值绑定"><span class="nav-number">2.0.5.</span> <span class="nav-text">值绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#where条件匹配"><span class="nav-number">2.0.6.</span> <span class="nav-text">where条件匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制转移语句break、continue等"><span class="nav-number">2.0.7.</span> <span class="nav-text">控制转移语句break、continue等</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
