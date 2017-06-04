@@ -239,6 +239,144 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/19/HTML基本结构/" itemprop="url">
+                  HTML基本结构
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-19T18:34:44+08:00" content="2016-05-19">
+              2016-05-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="基本结构"><a href="#基本结构" class="headerlink" title=" 基本结构"></a><1> 基本结构</1></h5><blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description</p>
+</blockquote>
+<p>元素：html、head、body</p>
+<hr>
+<h5 id="用元数据说明文档"><a href="#用元数据说明文档" class="headerlink" title="用元数据说明文档"></a><2>用元数据说明文档</2></h5><blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;!-- 文档标题 --&gt;</span><br><span class="line">	&lt;title&gt;标题&lt;/title&gt;</span><br><span class="line">	&lt;!-- 文档链接的基准URL地址 --&gt;</span><br><span class="line">	&lt;base href=&quot;http://alin123.github.io/&quot; /&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- meta元素定义元素据 --&gt;</span><br><span class="line">	&lt;!-- 作者：ALin --&gt;</span><br><span class="line">	&lt;meta name=&quot;author&quot; content=&quot;ALin&quot; /&gt;</span><br><span class="line">	&lt;!-- 当前页面的描述 --&gt;</span><br><span class="line">	&lt;meta name=&quot;description&quot; content=&quot;学习H5笔记&quot; /&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">	&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5&quot; /&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description</p>
+</blockquote>
+<p>元素：title、base、meta(1:指定名／值对定义元数据;2:声明字符编码;3:模拟http标头字段。)</p>
+<hr>
+<h5 id="定义css、引用指定外部资源、引用脚本元素"><a href="#定义css、引用指定外部资源、引用脚本元素" class="headerlink" title="定义css、引用指定外部资源、引用脚本元素"></a><3>定义css、引用指定外部资源、引用脚本元素</3></h5><blockquote>
+<p>code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">		a &#123;</span><br><span class="line">			color: white;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line">	&lt;!-- 通过外部链接引用css文件 --&gt;</span><br><span class="line">	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot; /&gt;</span><br><span class="line">	&lt;!-- 为页面定义网站标志 --&gt;</span><br><span class="line">	&lt;link rel=&quot;shortcut icon&quot; href=&quot;website.ico&quot; type=&quot;image/x-icon&quot; /&gt;</span><br><span class="line">	&lt;!-- 预先获取资源 --&gt;</span><br><span class="line">	&lt;link rel=&quot;prefetch&quot; href=&quot;/page2.html&quot; /&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- 定义Js --&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">		documents.write(&quot;this is from the script!&quot;);</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">	&lt;!-- 载入外部脚本库 --&gt;</span><br><span class="line">	&lt;script scr=&quot;simple.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;!-- 推迟执行 --&gt;</span><br><span class="line">	&lt;script defer&gt;</span><br><span class="line">		document.getElementById(&quot;elementId&quot;).innerText = &quot;newValue&quot;;</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">	&lt;!-- 异步执行脚本 --&gt;</span><br><span class="line">	&lt;script async&gt;</span><br><span class="line">		var i = 0;</span><br><span class="line">		while(1) &#123;</span><br><span class="line">			i ++;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>description</p>
+</blockquote>
+<p>元素：style、link、script。</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/18/第一篇：我自己理解的markdown语法/" itemprop="url">
                   第一篇：我自己理解的markdown语法
                 </a>
@@ -540,7 +678,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
