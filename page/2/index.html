@@ -239,6 +239,130 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/21/CSS过渡、动画和变换/" itemprop="url">
+                  CSS过渡、动画和变换
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-21T17:07:46+08:00" content="2016-06-21">
+              2016-06-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="过渡"><a href="#过渡" class="headerlink" title=" 过渡"></a><1> 过渡</1></h5><blockquote>
+<p>过渡效果一般由浏览器直接改变元素的CSS属性实现的。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;CSS过渡&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            input &#123;</span><br><span class="line">                border: medium double black;</span><br><span class="line">                background-color: white;</span><br><span class="line">                font-size: large;</span><br><span class="line">                &lt;!-- 反向过渡 --&gt;</span><br><span class="line">                -webkit-transition-delay: 0ms;</span><br><span class="line">                -webkit-transition-property: background-color, color, font-size;</span><br><span class="line">                -webkit-transition-duration: 300ms;</span><br><span class="line">            &#125;</span><br><span class="line">            input:hover &#123;</span><br><span class="line">                background-color: lightgray;</span><br><span class="line">                color: red;</span><br><span class="line">                font-size: x-large;</span><br><span class="line">                -webkit-transition-delay: 0ms;</span><br><span class="line">                -webkit-transition-property: background-color, color, font-size;</span><br><span class="line">                -webkit-transition-duration: 300ms;</span><br><span class="line">                -webkit-transition-timing-function: ease-out;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;过渡按钮&quot; /&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="动画"><a href="#动画" class="headerlink" title=" 动画"></a><2> 动画</2></h5><blockquote>
+<p>CSS动画的本质是增强的过渡，它让过渡具有了更多的选择、控制、灵活性。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta chaset=&quot;utf-8&quot;&gt;</span><br><span class="line">        &lt;title&gt;css动画&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            p &#123;</span><br><span class="line">                padding: 5px;</span><br><span class="line">                border: medium double black;</span><br><span class="line">                background-color: lightgray;</span><br><span class="line">                font-family: sans-serif;</span><br><span class="line">            &#125;</span><br><span class="line">            #myText &#123;</span><br><span class="line">                font-size: large;</span><br><span class="line">                border: medium solid black;</span><br><span class="line">            &#125;</span><br><span class="line">            #myText:hover &#123;</span><br><span class="line">                -webkit-animation-delay: 100ms;</span><br><span class="line">                -webkit-animation-duration: 1000ms;</span><br><span class="line">                &lt;!-- 重复次数 --&gt;</span><br><span class="line">                -webkit-animation-iteration-count: infinite;</span><br><span class="line">                -webkit-animation-timing-function: linear;</span><br><span class="line">                -webkit-animation-name: &apos;FirstAnimation&apos;;</span><br><span class="line">                -webkit-animation-direction: alternate;</span><br><span class="line">            &#125;</span><br><span class="line">            @-webkit-keyframes FirstAnimation &#123;</span><br><span class="line">                to &#123;</span><br><span class="line">                    font-size: x-large;</span><br><span class="line">                    background-color: red;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            ...&lt;span id=&quot;myText&quot;&gt;Touch Me&lt;/span&gt;...</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="变换"><a href="#变换" class="headerlink" title=" 变换"></a><3> 变换</3></h5><blockquote>
+<p>我们可以使用CSS变换为元素应用线性变换，也就是说可以旋转、缩放平移某个元素。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;CSS过渡&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            div &#123;</span><br><span class="line">                width: 100px;</span><br><span class="line">                height: 100px;</span><br><span class="line">                border: medium solid black;</span><br><span class="line">                background-color: red;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">            function translateElement() &#123;</span><br><span class="line">                var element = document.getElementById(&quot;myDiv&quot;);</span><br><span class="line">                element.style.transform = &quot;translate(100px, 100px)&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            function scaleElement() &#123;</span><br><span class="line">                var element = document.getElementById(&quot;myDiv&quot;);</span><br><span class="line">                element.style.transform = &quot;scale(0.5, 0.5)&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            function rotateElement() &#123;</span><br><span class="line">                var element = document.getElementById(&quot;myDiv&quot;);</span><br><span class="line">                element.style.transform = &quot;rotate(30deg)&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            function skewElement() &#123;</span><br><span class="line">                var element = document.getElementById(&quot;myDiv&quot;);</span><br><span class="line">                element.style.transform = &quot;skew(30deg, 20deg)&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div id=&quot;myDiv&quot;&gt;transform element!&lt;/div&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;translate&quot; onclick=&quot;translateElement()&quot; /&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;scale&quot; onclick=&quot;scaleElement()&quot; /&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;rotate&quot; onclick=&quot;rotateElement()&quot; /&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;skew&quot; onclick=&quot;skewElement()&quot; /&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/12/CSS层叠样式表之边框和背景/" itemprop="url">
                   CSS层叠样式表之边框和背景
                 </a>
@@ -1631,181 +1755,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/18/第一篇：我自己理解的markdown语法/" itemprop="url">
-                  第一篇：我自己理解的markdown语法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-18T23:18:30+08:00" content="2016-04-18">
-              2016-04-18
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><h4 id="title4"><a href="#title4" class="headerlink" title="title4"></a>title4</h4><h5 id="title5"><a href="#title5" class="headerlink" title="title5"></a>title5</h5><h6 id="title6"><a href="#title6" class="headerlink" title="title6"></a>title6</h6><p><img src="/../images/blog_1/markdown_1.png" alt="标题" title="标题"><br>区块1：</p>
-<blockquote>
-<p>此处为一个区块，它以 &gt; 右尖括号开始；<br>所有区块内的文本以 &gt; 开头即可；<br>下一行文本不以 &gt; 开头即可跳出该区块(中间需插入一个空行<strong>\n</strong>)</p>
-</blockquote>
-<p>区块外。。。<br><img src="/../images/blog_1/markdown_2.png" alt="区块" title="区块"><br>关键字文本：<br><em>keyword1</em> <strong>keyword2</strong> <strong><em>w</em></strong><br><em>keyword1</em> <strong>key2</strong> <strong><em>keyword3</em></strong><br><img src="/../images/blog_1/markdown_3.png" alt="关键字" title="关键字"><br>无须列表(+-*加空格加内容)</p>
-<ul>
-<li>花褪残红青杏小。</li>
-<li>燕子飞时，</li>
-<li>绿水人家绕。</li>
-</ul>
-<ul>
-<li>枝上柳绵吹又少。</li>
-<li>天涯何处无芳草！</li>
-<li>墙里秋千墙外道。</li>
-</ul>
-<ul>
-<li>墙外行人，</li>
-<li>墙里佳人笑。</li>
-<li>笑声不闻声渐消</li>
-<li>多情却别无情恼！<br><img src="/../images/blog_1/markdown_9.png" alt="无序表" title="无序表"><br>有序列表</li>
-</ul>
-<ol>
-<li>aaa</li>
-<li>bbb</li>
-<li>ccc<br>ddd</li>
-</ol>
-<ul>
-<li>A list item.<br>With multiple paragraphs.<br>part1</li>
-</ul>
-<ul>
-<li>Another item in the list.<br>part2</li>
-</ul>
-<ul>
-<li>Another item in the list.(没有成为一个新的段落，而是插入一个空行)<br>part3</li>
-</ul>
-<p>part4(新的”段落”)<br>这是新段落的内容</p>
-<p>part5<br>part6</p>
-<blockquote>
-<p>加标示符的内容与上一行内容像多了一个空行</p>
-</blockquote>
-<p><img src="/../images/blog_1/markdown_4.png" alt="有序表" title="有序表"><br>链接<br>this is an <a href="http://www.baidu.com" target="_blank" rel="external">example link</a>.<br>参考链接<br>I get 10 times more traffic from <a href="http://www.google.com/" title="谷歌" target="_blank" rel="external">Google</a> than <a href="http://www.baidu.com/" title="百度" target="_blank" rel="external">Baidu</a> or <a href="http://serarch.yahoo.com/" title="雅虎" target="_blank" rel="external">Yahoo</a>.</p>
-<p><img src="/../images/blog_1/markdown_5.png" alt="链接" title="链接"><br><img src="/../images/blog_1/markdown_6.png" alt="图片" title="图片"></p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int fun(Int a, int b) &#123;</span><br><span class="line">return a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/../images/blog_1/markdown_7.png" alt="代码片段" title="代码片段"></p>
-<table>
-<thead>
-<tr>
-<th>Default</th>
-<th style="text-align:left">Left</th>
-<th style="text-align:right">Right</th>
-<th style="text-align:center">Center</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1+1=1</td>
-<td style="text-align:left"></td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td>1*1=1</td>
-<td style="text-align:left">1*2=2</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td>1*1=1</td>
-<td style="text-align:left">1*2=2</td>
-<td style="text-align:right">1*3=3</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td>1*1=1</td>
-<td style="text-align:left">1*2=2</td>
-<td style="text-align:right">1*3=3</td>
-<td style="text-align:center">1*4=4</td>
-</tr>
-</tbody>
-</table>
-<p><img src="/../images/blog_1/markdown_8.png" alt="表格" title="表格"></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1851,7 +1800,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -239,6 +239,154 @@
             
               
                 
+                <a class="post-title-link" href="/2017/06/04/swift的函数与方法/" itemprop="url">
+                  swift的函数与方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-06-04T11:18:40+08:00" content="2017-06-04">
+              2017-06-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="函数、方法"><a href="#函数、方法" class="headerlink" title="函数、方法"></a>函数、方法</h2><h4 id="Function-函数是用来完成特定任务的独立的代码块"><a href="#Function-函数是用来完成特定任务的独立的代码块" class="headerlink" title="Function: 函数是用来完成特定任务的独立的代码块"></a>Function: 函数是用来完成特定任务的独立的代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">func sayHello(persionName: String) -&gt; String&#123;</span><br><span class="line">    let greeting = &quot;hello, &quot; + persionName + &quot;!&quot;</span><br><span class="line">    return greeting</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>多个输入参数的函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func halfOpenRangeLength(start: Int, end: Int) -&gt; Int&#123;</span><br><span class="line">    return end - start</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>无参函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func sayHelloWorld() -&gt; String &#123;</span><br><span class="line">    return &quot;hello world&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>无返回值的函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func sayGoodbye(personName: String) &#123;</span><br><span class="line">    print(&quot;Goodbye, \(personName)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>严格上来说，虽然没有返回值被定义，sayGoodbye 函数依然返回了值。没有定义返回类型的函数会返回特殊的值，叫 Void。它其实是一个空的元组（tuple），没有任何元素，可以写成()。</em></strong></p>
+<p><strong>多个返回值的函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">func count(string: String) -&gt; (vowels: Int, consonants: Int, others: Int)&#123;</span><br><span class="line">    var vowels = 0, consonants = 0, others = 0</span><br><span class="line">    for character in string.characters &#123;</span><br><span class="line">        switch String(character).lowercased() &#123;</span><br><span class="line">            case &quot;a&quot;, &quot;e&quot;, &quot;i&quot;, &quot;0&quot;, &quot;u&quot;:</span><br><span class="line">            vowels += 1</span><br><span class="line">            case &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;, &quot;j&quot;, &quot;k&quot;, &quot;l&quot;, &quot;m&quot;, &quot;n&quot;, &quot;p&quot;, &quot;q&quot;, &quot;r&quot;, &quot;s&quot;, &quot;t&quot;, &quot;v&quot;, &quot;w&quot;, &quot;x&quot;, &quot;y&quot;, &quot;z&quot;:</span><br><span class="line">            consonants += 1</span><br><span class="line">        default:</span><br><span class="line">            others += 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return (vowels, consonants, others)</span><br><span class="line">&#125;</span><br><span class="line">//可选元组返回类型(optianal Tuple return types)</span><br><span class="line">func minMax(array: [Int]) -&gt; (Int, Int)? &#123;</span><br><span class="line">    if array.isEmpty &#123;</span><br><span class="line">        return nil</span><br><span class="line">    &#125;</span><br><span class="line">    var min = array[0]</span><br><span class="line">    var max = array[0]</span><br><span class="line">    for item in array[1..&lt;array.count] &#123;</span><br><span class="line">        if item &lt; min &#123;</span><br><span class="line">            min = item</span><br><span class="line">        &#125;</span><br><span class="line">        if item &gt; max &#123;</span><br><span class="line">            max = item</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return (min, max)</span><br><span class="line">&#125;</span><br><span class="line">let bounds = minMax(array: [5, 2, 5, 6, 7, 2])</span><br><span class="line">if let (min, max) = bounds &#123;</span><br><span class="line">    print(&quot;min = \(min), max = \(max)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>函数参数标签和参数名称(Function Argument Labels and Parameters Names)</code>:每个函数参数都有一个参数标签(argument label)以及一个参数名称(parameter name)。参数标签在调用函数的时候使用；调用的时候需要将函数的参数标签写在对应的参数前面。参数名称在函数的实现中使用。默认情况下，函数参数使用参数名称来作为它们的参数标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">func join(aString s1: String, toString s2: String, withJoiner joiner: String) -&gt; String &#123;</span><br><span class="line">    return s1 + joiner + s2//sString为参数标签Argument Labels，s1为函数内部使用的参数名称Parameters Names</span><br><span class="line">&#125;</span><br><span class="line">join(aString: &quot;Hello&quot;, toString: &quot;world&quot;, withJoiner: &quot;,&quot;)//带有描述性的参数标签</span><br></pre></td></tr></table></figure>
+<p><strong>用_忽略参数标签</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">func containesCharacter(_ string: String, _ characterToFind: Character) -&gt; Bool&#123;</span><br><span class="line">    for character in string.characters &#123;</span><br><span class="line">        if character == characterToFind &#123;</span><br><span class="line">            return true</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return false</span><br><span class="line">&#125;</span><br><span class="line">let containsAVee = containesCharacter(&quot;aardvark&quot;, &quot;v&quot;)</span><br></pre></td></tr></table></figure>
+<p><strong>默认参数值(Default Parameter Values)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//注意如果使用默认参数那么此参数名将默认作为外部参数名（此时局部参数名和外部参数名相同）</span><br><span class="line">func new_join(string: String, toTheString: String, joiner: String = &quot; &quot;) -&gt; String&#123;</span><br><span class="line">    return string + joiner + toTheString;</span><br><span class="line">&#125;</span><br><span class="line">new_join(string: &quot;abc&quot;, toTheString: &quot;xyz&quot;, joiner: &quot;,&quot;)</span><br><span class="line">new_join(string: &quot;abc&quot;, toTheString: &quot;xyz&quot;)//可省去带有默认值的参数</span><br></pre></td></tr></table></figure>
+<p><strong>可变参数(Variadic Parameters)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func arithmeticMean(_ numbers: Double...) -&gt; Double&#123;</span><br><span class="line">    var total: Double = 0</span><br><span class="line">    for number in numbers&#123;</span><br><span class="line">        total += number</span><br><span class="line">    &#125;</span><br><span class="line">    return total / Double(numbers.count)</span><br><span class="line">&#125;</span><br><span class="line">//注意： 一个函数至多能有一个可变参数，而且它必须是参数表中最后的一个。这样做是为了避免函数调用时出现歧义。</span><br><span class="line">arithmeticMean(1,2,3,4,5,6)</span><br><span class="line">arithmeticMean(1,2,3)</span><br></pre></td></tr></table></figure>
+<p><strong>输入输出参数(In－Out Parameters)</strong></p>
+<ol>
+<li>如果你想要一个函数可以修改参数的值，并且想要在这些修改在函数调用后仍然存在，那么就应该把这个参数定义为输入输出参数</li>
+<li>定义一个输入输出参数时，在参数定义前加 inout 关键字。一个输入输出参数有传入函数的值，这个值被函数修改，然后被传出函数，替换原来的值。</li>
+<li>你只能将变量作为输入输出参数。你不能传入常量或者字面量（literal value），因为这些量是不能被修改的。当传入的参数作为输入输出参数时，需要在参数前加&amp;符，表示这个值可以被函数修改。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//注意：输入输出参数不能有默认值，而且可变参数不能用inout标记</span><br><span class="line">func swapTwoInts( a: inout Int, b: inout Int)&#123;</span><br><span class="line">    let temporaryA = a</span><br><span class="line">    a = b</span><br><span class="line">    b = temporaryA</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var someInt = 3</span><br><span class="line">var anotherInt = 107</span><br><span class="line">swapTwoInts(a: &amp;someInt, b: &amp;anotherInt)</span><br></pre></td></tr></table></figure>
+<p><strong>函数类型作为参数类型(function types as parameters types)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func printMathResult(mathFunction: (Int, Int) -&gt; Int, a: Int, b: Int)&#123;</span><br><span class="line">    print(&quot;Result: \(mathFunction(a,b))&quot;)</span><br><span class="line">&#125;</span><br><span class="line">func addInts(a: Int, b:Int) -&gt; Int&#123;</span><br><span class="line">    return a + b</span><br><span class="line">&#125;</span><br><span class="line">let mathFunc:(Int, Int) -&gt; Int = addInts</span><br><span class="line">printMathResult(mathFunction: mathFunc, a: 5, b: 6)</span><br><span class="line">printMathResult(mathFunction: &#123; (a, b) -&gt; Int in</span><br><span class="line">    return b</span><br><span class="line">&#125;, a: 10, b: 20)</span><br><span class="line">printMathResult(mathFunction: &#123; (a, b) -&gt; Int in</span><br><span class="line">    a + b</span><br><span class="line">&#125;, a: 10, b: 20)</span><br></pre></td></tr></table></figure>
+<p><strong>函数作为返回值(function type as return types)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">func stepForward(intput: Int) -&gt; Int&#123;</span><br><span class="line">    return intput + 1</span><br><span class="line">&#125;</span><br><span class="line">func stepBackward(input: Int) -&gt; Int&#123;</span><br><span class="line">    return input - 1</span><br><span class="line">&#125;</span><br><span class="line">func chooseStepFunction(backwards: Bool) -&gt; (Int) -&gt; Int&#123;</span><br><span class="line">    return backwards ? stepBackward : stepForward</span><br><span class="line">&#125;</span><br><span class="line">var currentVale = 3</span><br><span class="line">let moveNearerToZero = chooseStepFunction(backwards: currentVale &gt; 0)</span><br><span class="line">print(&quot;counting to zero:&quot;)</span><br><span class="line">while currentVale != 0&#123;</span><br><span class="line">    print(&quot;\(currentVale)...&quot;)</span><br><span class="line">    currentVale = moveNearerToZero(currentVale)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>嵌套函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">func _chooseStepFunction(backwards: Bool) -&gt; (Int) -&gt; Int &#123;</span><br><span class="line">    func stepForward(input: Int) -&gt; Int &#123; return input + 1 &#125;</span><br><span class="line">    func stepBackward(input: Int) -&gt; Int &#123; return input - 1 &#125;</span><br><span class="line">    return backwards ? stepBackward : stepForward</span><br><span class="line">&#125;</span><br><span class="line">var currentValue = -4</span><br><span class="line">let _moveNearerToZero = _chooseStepFunction(backwards: currentValue &gt; 0)</span><br><span class="line">while currentValue != 0 &#123;</span><br><span class="line">    print(&quot;\(currentValue)... &quot;)</span><br><span class="line">    currentValue = _moveNearerToZero(currentValue)</span><br><span class="line">&#125;</span><br><span class="line">print(&quot;zero!&quot;)</span><br><span class="line">// -4...</span><br><span class="line">// -3...</span><br><span class="line">// -2...</span><br><span class="line">// -1...</span><br><span class="line">// zero!</span><br></pre></td></tr></table></figure>
+<p><strong>闭包</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; ( parameters ) -&gt; returnType in</span><br><span class="line">   statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//闭包会捕获一定作用域内的常亮或者变量进而闭合并包裹着</span><br><span class="line">func add()-&gt; ()-&gt;Int&#123;</span><br><span class="line">    var total = 0</span><br><span class="line">    var step = 1</span><br><span class="line">    func fn()-&gt;Int&#123;</span><br><span class="line">        total += step</span><br><span class="line">        return total</span><br><span class="line">    &#125;</span><br><span class="line">    return fn</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var a = add()</span><br><span class="line">a()</span><br><span class="line">a() //a保存了total的副本</span><br><span class="line"></span><br><span class="line">var b = add()</span><br><span class="line">b() //说明a和b单独保存了total的副本</span><br><span class="line"></span><br><span class="line">var c = b</span><br><span class="line">c() //说明闭包是引用类型，也就是说函数是引用类型</span><br></pre></td></tr></table></figure>
+<p><strong>尾随闭包</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var array = [&quot;Alin&quot;, &quot;Shirley&quot;, &quot;Tom&quot;, &quot;Joke&quot;]</span><br><span class="line">array.sorted &#123; (a, b) -&gt; Bool in</span><br><span class="line">    a &gt; b</span><br><span class="line">&#125;</span><br><span class="line">let digitNames = [</span><br><span class="line">    0: &quot;Zero&quot;, 1: &quot;One&quot;, 2: &quot;Two&quot;, 3: &quot;Three&quot;, 4: &quot;Four&quot;,</span><br><span class="line">    5: &quot;Five&quot;, 6: &quot;Six&quot;, 7: &quot;Seven&quot;, 8: &quot;Eight&quot;, 9: &quot;Nine&quot;</span><br><span class="line">]</span><br><span class="line">let numbers = [2017, 04, 20];</span><br><span class="line">numbers.map &#123; (number) -&gt; String in</span><br><span class="line">    var number = number</span><br><span class="line">    var result = &quot;&quot;</span><br><span class="line">    repeat &#123;</span><br><span class="line">        result = digitNames[number % 10]! + result</span><br><span class="line">        number /= 10</span><br><span class="line">    &#125; while number &gt; 0</span><br><span class="line">    return result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/04/17/swift的基本数据结构和控制语句/" itemprop="url">
                   swift的基本数据结构和控制语句
                 </a>
@@ -1213,130 +1361,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/21/CSS过渡、动画和变换/" itemprop="url">
-                  CSS过渡、动画和变换
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-21T17:07:46+08:00" content="2016-06-21">
-              2016-06-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="过渡"><a href="#过渡" class="headerlink" title=" 过渡"></a><1> 过渡</1></h5><blockquote>
-<p>过渡效果一般由浏览器直接改变元素的CSS属性实现的。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;CSS过渡&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            input &#123;</span><br><span class="line">                border: medium double black;</span><br><span class="line">                background-color: white;</span><br><span class="line">                font-size: large;</span><br><span class="line">                &lt;!-- 反向过渡 --&gt;</span><br><span class="line">                -webkit-transition-delay: 0ms;</span><br><span class="line">                -webkit-transition-property: background-color, color, font-size;</span><br><span class="line">                -webkit-transition-duration: 300ms;</span><br><span class="line">            &#125;</span><br><span class="line">            input:hover &#123;</span><br><span class="line">                background-color: lightgray;</span><br><span class="line">                color: red;</span><br><span class="line">                font-size: x-large;</span><br><span class="line">                -webkit-transition-delay: 0ms;</span><br><span class="line">                -webkit-transition-property: background-color, color, font-size;</span><br><span class="line">                -webkit-transition-duration: 300ms;</span><br><span class="line">                -webkit-transition-timing-function: ease-out;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;过渡按钮&quot; /&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="动画"><a href="#动画" class="headerlink" title=" 动画"></a><2> 动画</2></h5><blockquote>
-<p>CSS动画的本质是增强的过渡，它让过渡具有了更多的选择、控制、灵活性。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta chaset=&quot;utf-8&quot;&gt;</span><br><span class="line">        &lt;title&gt;css动画&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            p &#123;</span><br><span class="line">                padding: 5px;</span><br><span class="line">                border: medium double black;</span><br><span class="line">                background-color: lightgray;</span><br><span class="line">                font-family: sans-serif;</span><br><span class="line">            &#125;</span><br><span class="line">            #myText &#123;</span><br><span class="line">                font-size: large;</span><br><span class="line">                border: medium solid black;</span><br><span class="line">            &#125;</span><br><span class="line">            #myText:hover &#123;</span><br><span class="line">                -webkit-animation-delay: 100ms;</span><br><span class="line">                -webkit-animation-duration: 1000ms;</span><br><span class="line">                &lt;!-- 重复次数 --&gt;</span><br><span class="line">                -webkit-animation-iteration-count: infinite;</span><br><span class="line">                -webkit-animation-timing-function: linear;</span><br><span class="line">                -webkit-animation-name: &apos;FirstAnimation&apos;;</span><br><span class="line">                -webkit-animation-direction: alternate;</span><br><span class="line">            &#125;</span><br><span class="line">            @-webkit-keyframes FirstAnimation &#123;</span><br><span class="line">                to &#123;</span><br><span class="line">                    font-size: x-large;</span><br><span class="line">                    background-color: red;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            ...&lt;span id=&quot;myText&quot;&gt;Touch Me&lt;/span&gt;...</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="变换"><a href="#变换" class="headerlink" title=" 变换"></a><3> 变换</3></h5><blockquote>
-<p>我们可以使用CSS变换为元素应用线性变换，也就是说可以旋转、缩放平移某个元素。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;CSS过渡&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            div &#123;</span><br><span class="line">                width: 100px;</span><br><span class="line">                height: 100px;</span><br><span class="line">                border: medium solid black;</span><br><span class="line">                background-color: red;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">            function translateElement() &#123;</span><br><span class="line">                var element = document.getElementById(&quot;myDiv&quot;);</span><br><span class="line">                element.style.transform = &quot;translate(100px, 100px)&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            function scaleElement() &#123;</span><br><span class="line">                var element = document.getElementById(&quot;myDiv&quot;);</span><br><span class="line">                element.style.transform = &quot;scale(0.5, 0.5)&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            function rotateElement() &#123;</span><br><span class="line">                var element = document.getElementById(&quot;myDiv&quot;);</span><br><span class="line">                element.style.transform = &quot;rotate(30deg)&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            function skewElement() &#123;</span><br><span class="line">                var element = document.getElementById(&quot;myDiv&quot;);</span><br><span class="line">                element.style.transform = &quot;skew(30deg, 20deg)&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div id=&quot;myDiv&quot;&gt;transform element!&lt;/div&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;translate&quot; onclick=&quot;translateElement()&quot; /&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;scale&quot; onclick=&quot;scaleElement()&quot; /&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;rotate&quot; onclick=&quot;rotateElement()&quot; /&gt;</span><br><span class="line">        &lt;input type=&quot;button&quot; value=&quot;skew&quot; onclick=&quot;skewElement()&quot; /&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1382,7 +1406,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
